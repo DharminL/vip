@@ -457,16 +457,16 @@ function vipindustrial_scripts() {
 	//wp_enqueue_script( 'vipindustrial-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '1.0', true );
 
 	// All Javascripts
-	wp_enqueue_script( 'vipindustrial-skip-link-focus-fix', get_theme_file_uri( '/assets/js/jquery.min.js' ), array(), '1.0', true );
-	wp_enqueue_script( 'vipindustrial-skip-link-focus-fix', get_theme_file_uri( '/assets/js/bootstrap.min.js' ), array(), '1.0', true );
+	wp_enqueue_script( 'vipindustrial-jquery-main', get_theme_file_uri( '/assets/js/jquery.min.js' ), array(), '1.0', true );
+	wp_enqueue_script( 'vipindustrial-bootstrap', get_theme_file_uri( '/assets/js/bootstrap.min.js' ), array(), '1.0', true );
 
 	// Plugins for this template
-	wp_enqueue_script( 'vipindustrial-skip-link-focus-fix', get_theme_file_uri( '/assets/js/jquery-plugin-collection.js' ), array(), '1.0', true );
-	wp_enqueue_script( 'vipindustrial-skip-link-focus-fix', get_theme_file_uri( '/assets/js/portfolio.js' ), array(), '1.0', true );
+	wp_enqueue_script( 'vipindustrial-plugin-collection', get_theme_file_uri( '/assets/js/jquery-plugin-collection.js' ), array(), '1.0', true );
+	wp_enqueue_script( 'vipindustrial-portfolio', get_theme_file_uri( '/assets/js/portfolio.js' ), array(), '1.0', true );
 	// Google map api
-	wp_enqueue_script( 'vipindustrial-skip-link-focus-fix', 'https://maps.googleapis.com/maps/api/js?key', array(), '1.0', true );
+	//wp_enqueue_script( 'vipindustrial-google-map', 'https://maps.googleapis.com/maps/api/js?key', array(), '1.0', true );
     // Custom script for this template
-	wp_enqueue_script( 'vipindustrial-skip-link-focus-fix', get_theme_file_uri( '/assets/js/script.js' ), array(), '1.0', true );
+	wp_enqueue_script( 'vipindustrial-script', get_theme_file_uri( '/assets/js/script.js' ), array(), '1.0', true );
 
 	/*$vipindustrial_l10n = array(
 		'quote'          => vipindustrial_get_svg( array( 'icon' => 'quote-right' ) ),
@@ -559,6 +559,14 @@ function vipindustrial_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 }
 add_filter( 'wp_get_attachment_image_attributes', 'vipindustrial_post_thumbnail_sizes_attr', 10, 3 );
 
+function change_custom_logo_class( $html ) {
+    //$html = str_replace( 'custom-logo', 'navbar-brand', $html );
+    $html = str_replace( 'custom-logo-link', 'navbar-brand', $html );
+
+    return $html;
+}
+add_filter( 'get_custom_logo', 'change_custom_logo_class' );
+
 /**
  * Use front-page.php when Front page displays is set to a static page.
  *
@@ -597,3 +605,8 @@ require get_parent_theme_file_path( '/inc/customizer.php' );
  * SVG icons functions and filters.
  */
 require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+/**
+ * Products Custom post type.
+ */
+require get_parent_theme_file_path( '/inc/products.php' );

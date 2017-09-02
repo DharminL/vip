@@ -29,61 +29,63 @@ function vipindustrial_customize_register( $wp_customize ) {
 	/**
 	 * Custom colors.
 	 */
-	$wp_customize->add_setting( 'colorscheme', array(
-		'default'           => 'light',
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'vipindustrial_sanitize_colorscheme',
-	) );
+	$wp_customize->remove_section("colors");
+	$wp_customize->remove_section( 'custom_css' );
+	// $wp_customize->add_setting( 'colorscheme', array(
+	// 	'default'           => 'light',
+	// 	'transport'         => 'postMessage',
+	// 	'sanitize_callback' => 'vipindustrial_sanitize_colorscheme',
+	// ) );
 
-	$wp_customize->add_setting( 'colorscheme_hue', array(
-		'default'           => 250,
-		'transport'         => 'postMessage',
-		'sanitize_callback' => 'absint', // The hue is stored as a positive integer.
-	) );
+	// $wp_customize->add_setting( 'colorscheme_hue', array(
+	// 	'default'           => 250,
+	// 	'transport'         => 'postMessage',
+	// 	'sanitize_callback' => 'absint', // The hue is stored as a positive integer.
+	// ) );
 
-	$wp_customize->add_control( 'colorscheme', array(
-		'type'    => 'radio',
-		'label'    => __( 'Color Scheme', 'vipindustrial' ),
-		'choices'  => array(
-			'light'  => __( 'Light', 'vipindustrial' ),
-			'dark'   => __( 'Dark', 'vipindustrial' ),
-			'custom' => __( 'Custom', 'vipindustrial' ),
-		),
-		'section'  => 'colors',
-		'priority' => 5,
-	) );
+	// $wp_customize->add_control( 'colorscheme', array(
+	// 	'type'    => 'radio',
+	// 	'label'    => __( 'Color Scheme', 'vipindustrial' ),
+	// 	'choices'  => array(
+	// 		'light'  => __( 'Light', 'vipindustrial' ),
+	// 		'dark'   => __( 'Dark', 'vipindustrial' ),
+	// 		'custom' => __( 'Custom', 'vipindustrial' ),
+	// 	),
+	// 	'section'  => 'colors',
+	// 	'priority' => 5,
+	// ) );
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'colorscheme_hue', array(
-		'mode' => 'hue',
-		'section'  => 'colors',
-		'priority' => 6,
-	) ) );
+	// $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'colorscheme_hue', array(
+	// 	'mode' => 'hue',
+	// 	'section'  => 'colors',
+	// 	'priority' => 6,
+	// ) ) );
 
 	/**
 	 * Theme options.
 	 */
-	$wp_customize->add_section( 'theme_options', array(
-		'title'    => __( 'Theme Options', 'vipindustrial' ),
-		'priority' => 130, // Before Additional CSS.
-	) );
+	// $wp_customize->add_section( 'theme_options', array(
+	// 	'title'    => __( 'Theme Options', 'vipindustrial' ),
+	// 	'priority' => 130, // Before Additional CSS.
+	// ) );
 
-	$wp_customize->add_setting( 'page_layout', array(
-		'default'           => 'two-column',
-		'sanitize_callback' => 'vipindustrial_sanitize_page_layout',
-		'transport'         => 'postMessage',
-	) );
+	// $wp_customize->add_setting( 'page_layout', array(
+	// 	'default'           => 'two-column',
+	// 	'sanitize_callback' => 'vipindustrial_sanitize_page_layout',
+	// 	'transport'         => 'postMessage',
+	// ) );
 
-	$wp_customize->add_control( 'page_layout', array(
-		'label'       => __( 'Page Layout', 'vipindustrial' ),
-		'section'     => 'theme_options',
-		'type'        => 'radio',
-		'description' => __( 'When the two-column layout is assigned, the page title is in one column and content is in the other.', 'vipindustrial' ),
-		'choices'     => array(
-			'one-column' => __( 'One Column', 'vipindustrial' ),
-			'two-column' => __( 'Two Column', 'vipindustrial' ),
-		),
-		'active_callback' => 'vipindustrial_is_view_with_layout_option',
-	) );
+	// $wp_customize->add_control( 'page_layout', array(
+	// 	'label'       => __( 'Page Layout', 'vipindustrial' ),
+	// 	'section'     => 'theme_options',
+	// 	'type'        => 'radio',
+	// 	'description' => __( 'When the two-column layout is assigned, the page title is in one column and content is in the other.', 'vipindustrial' ),
+	// 	'choices'     => array(
+	// 		'one-column' => __( 'One Column', 'vipindustrial' ),
+	// 		'two-column' => __( 'Two Column', 'vipindustrial' ),
+	// 	),
+	// 	'active_callback' => 'vipindustrial_is_view_with_layout_option',
+	// ) );
 
 	/**
 	 * Filter number of front page sections in VIP Industrial.

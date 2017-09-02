@@ -835,61 +835,56 @@
         = STYLE SWITCHER
     -------------------------------------------*/  
     // HTML FOR COLOR SWITCHER
-    var switcherHtml = '<div class="style-switcher-box"> <div class="switcher-inner"><h5>Style Switcher</h5> <div class="main-list"> <div class="list"> <span class="list-title">Skin color</span> <div class="sublist"> <ul class="color-chager"> <li class="color-default"><img src="images/switcher-color/img-1.jpg" alt></li> <li class="color-style1"><img src="images/switcher-color/img-2.jpg" alt></li> <li class="color-style2"><img src="images/switcher-color/img-3.jpg" alt></li> <li class="color-style3"><img src="images/switcher-color/img-4.jpg" alt></li> </ul> </div> </div> <div class="list layout"> <span class="list-title">Layout</span> <div class="sublist"> <ul class="layout-sw"> <li>Full width</li> <li class="box">Box</li> </ul> </div> </div> </div> <p><span>Note: </span> This template is build with SASS. The skin color is only demo. You can change the color scheme as your like. </p> </div> <button class="toggle-btn"><i class="fa fa-cog"></i></button> </div>';
-    var blankStyleInject = '<link href="css/blank-color.css" rel="stylesheet" title="switchstyle">';
-    var htmlHead = $("head");
+    // var switcherHtml = '<div class="style-switcher-box"> <div class="switcher-inner"><h5>Style Switcher</h5> <div class="main-list"> <div class="list"> <span class="list-title">Skin color</span> <div class="sublist"> <ul class="color-chager"> <li class="color-default"><img src="images/switcher-color/img-1.jpg" alt></li> <li class="color-style1"><img src="images/switcher-color/img-2.jpg" alt></li> <li class="color-style2"><img src="images/switcher-color/img-3.jpg" alt></li> <li class="color-style3"><img src="images/switcher-color/img-4.jpg" alt></li> </ul> </div> </div> <div class="list layout"> <span class="list-title">Layout</span> <div class="sublist"> <ul class="layout-sw"> <li>Full width</li> <li class="box">Box</li> </ul> </div> </div> </div> <p><span>Note: </span> This template is build with SASS. The skin color is only demo. You can change the color scheme as your like. </p> </div> <button class="toggle-btn"><i class="fa fa-cog"></i></button> </div>';
+    // var blankStyleInject = '<link href="css/blank-color.css" rel="stylesheet" title="switchstyle">';
+    // var htmlHead = $("head");
 
-        $("body").append(switcherHtml);
-        htmlHead.append(blankStyleInject);
-
-
-    function styleSwitcher() {
-        if ($(".style-switcher-box").length) {
-            var switcherHolder = $(".style-switcher-box"),
-                btn = switcherHolder.find(".toggle-btn"),
-                colorChangerBtn = $(".style-switcher-box .color-chager li"),
-                layoutChangerBtn = $(".style-switcher-box .layout-sw li"),
-                links = document.getElementsByTagName("link");
-            var body = $("body");
-
-            for (var i = 0; i <= links.length; i++){
-                var title = links[i].getAttribute("title");
-                if ( title == "switchstyle") {
-                    var targetLink = links[i];
-                    var href = links[i].getAttribute("href");
-                    break;
-                }
-            }
+    //     $("body").append(switcherHtml);
+    //     htmlHead.append(blankStyleInject);
 
 
-            btn.on("click", function() {
-                switcherHolder.toggleClass("toggle-switcherbox");
+    // function styleSwitcher() {
+    //     if ($(".style-switcher-box").length) {
+    //         var switcherHolder = $(".style-switcher-box"),
+    //             btn = switcherHolder.find(".toggle-btn"),
+    //             colorChangerBtn = $(".style-switcher-box .color-chager li"),
+    //             layoutChangerBtn = $(".style-switcher-box .layout-sw li"),
+    //             links = document.getElementsByTagName("link");
+    //         var body = $("body");
 
-            })
-
-            colorChangerBtn.on("click", function() {
-                var $this = $(this);
-                var styleFileName = $this.attr("class");
-                targetLink.href = "css/" + styleFileName + ".css";
-            });
-
-            layoutChangerBtn.on("click", function(e) {
-                var $this = $(this);
-                if ( $this.hasClass("box") ) {
-                    body.addClass("box-layout");
-                } else {
-                    body.removeClass("box-layout");
-                }
-            })
-        }
-    }
-
-    styleSwitcher();
+    //         for (var i = 0; i <= links.length; i++){
+    //             var title = links[i].getAttribute("title");
+    //             if ( title == "switchstyle") {
+    //                 var targetLink = links[i];
+    //                 var href = links[i].getAttribute("href");
+    //                 break;
+    //             }
+    //         }
 
 
+    //         btn.on("click", function() {
+    //             switcherHolder.toggleClass("toggle-switcherbox");
 
+    //         })
 
-    
+    //         colorChangerBtn.on("click", function() {
+    //             var $this = $(this);
+    //             var styleFileName = $this.attr("class");
+    //             targetLink.href = "css/" + styleFileName + ".css";
+    //         });
+
+    //         layoutChangerBtn.on("click", function(e) {
+    //             var $this = $(this);
+    //             if ( $this.hasClass("box") ) {
+    //                 body.addClass("box-layout");
+    //             } else {
+    //                 body.removeClass("box-layout");
+    //             }
+    //         })
+    //     }
+    // }
+
+    // styleSwitcher();
 
 
 
@@ -901,7 +896,7 @@
             preloader();
 
             sliderBgSetting();
-			
+
             toggleMobileNavigation();
 
             smallNavFunctionality();

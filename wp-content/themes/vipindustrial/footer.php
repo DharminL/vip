@@ -40,7 +40,7 @@
 			</div><!-- .wrap -->
 		</footer><!-- #colophon -->
 	</div><!-- .site-content-contain -->
-</div><!-- #page -->
+</div><!-- end of page-wrapper -->
 <?php wp_footer(); ?>
 
 </body>
