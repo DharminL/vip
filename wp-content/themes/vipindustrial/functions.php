@@ -60,8 +60,8 @@ function vipindustrial_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
-		'top'    => __( 'Top Menu', 'vipindustrial' ),
-		'social' => __( 'Social Links Menu', 'vipindustrial' ),
+		'top'    => __( 'Main Menu', 'vipindustrial' ),
+		'footer-menu' => __( 'Footer Menu', 'vipindustrial' ),
 	) );
 
 	/*
@@ -464,7 +464,7 @@ function vipindustrial_scripts() {
 	wp_enqueue_script( 'vipindustrial-plugin-collection', get_theme_file_uri( '/assets/js/jquery-plugin-collection.js' ), array(), '1.0', true );
 	wp_enqueue_script( 'vipindustrial-portfolio', get_theme_file_uri( '/assets/js/portfolio.js' ), array(), '1.0', true );
 	// Google map api
-	//wp_enqueue_script( 'vipindustrial-google-map', 'https://maps.googleapis.com/maps/api/js?key', array(), '1.0', true );
+	wp_enqueue_script( 'vipindustrial-google-map', 'https://maps.googleapis.com/maps/api/js?key', array(), '1.0', true );
     // Custom script for this template
 	wp_enqueue_script( 'vipindustrial-script', get_theme_file_uri( '/assets/js/script.js' ), array(), '1.0', true );
 
@@ -596,6 +596,24 @@ require get_parent_theme_file_path( '/inc/template-tags.php' );
  */
 require get_parent_theme_file_path( '/inc/template-functions.php' );
 
+	/**
+	* Social Media icon helper functions
+	*/
+	function vipindustrial_get_social_sites() {
+		// Store social site names in array
+		$social_sites = array(
+			'facebook',
+			'twitter',
+			'linkedin',
+			'instagram',
+			'google-plus',
+			'rss',
+			'youtube',
+			'email'
+		);
+		return $social_sites;
+	}
+
 /**
  * Customizer additions.
  */
@@ -610,3 +628,34 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
  * Products Custom post type.
  */
 require get_parent_theme_file_path( '/inc/products.php' );
+
+// Get user input from the Customizer and output the linked social media icons
+function vipindustrial_show_social_icons() {
+	$social_sites = vipindustrial_get_social_sites();
+
+	// Any inputs that aren't empty are stored in $active_sites array
+	foreach( $social_sites as $social_site ) {
+		if ( strlen( get_theme_mod( $social_site ) ) > 0 ) {
+			$active_sites[] = $social_site;
+		}
+	}
+
+	// For each active social site, add it as a list item
+	if ( !empty( $active_sites ) ) {
+		echo "<ul class='social-links'>";
+			foreach ( $active_sites as $active_site ) { ?>
+				<li>
+					<a href="<?php echo get_theme_mod( $active_site ); ?>">
+						<?php if( $active_site == 'vimeo' ) { ?>
+							<i class="fa fa-<?php echo $active_site; ?>-square"></i> <?php
+						} else if( $active_site == 'email' ) { ?>
+							<i class="fa fa-envelope"></i> <?php
+						} else { ?>
+							<i class="fa fa-<?php echo $active_site; ?>"></i> <?php
+						} ?>
+					</a>
+				</li>
+			<?php }
+		echo "</ul>";
+	}
+}

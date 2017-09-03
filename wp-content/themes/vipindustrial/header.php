@@ -16,6 +16,7 @@
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
@@ -78,63 +79,14 @@
 
                 <div id="navbar" class="navbar-collapse collapse navbar-right navigation-holder">
                     <button class="close-navbar"><i class="fa fa-close"></i></button>
-                    <ul class="nav navbar-nav">
-                        <li class="menu-item-has-children current-menu-ancestor current-menu-parent">
-                            <a href="#">Home</a>
-                            <ul class="sub-menu">
-                                <li class="current-menu-item"><a href="index.html">Home style 1</a></li>
-                                <li><a href="index-2.html">Home style 2</a></li>
-                                <li><a href="index-3.html">Home style 3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="about.html">About</a></li>
-                        <li class="menu-item-has-children">
-                            <a href="#">Projects</a>
-                            <ul class="sub-menu">
-                                <li><a href="projects-s1.html">Projects style 1</a></li>
-                                <li><a href="projects-s2.html">Projects style 2</a></li>
-                                <li><a href="projects-s3.html">Projects style 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">Pages</a>
-                            <ul class="sub-menu">
-                                <li><a href="service-single.html">Service single</a></li>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="time-line.html">Time line</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                                <li><a href="clients.html">Clients</a></li>
-                                <li><a href="careers.html">Careers</a></li>
-                                <li class="menu-item-has-children">
-                                    <a href="#Level3">Testimonials</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="testimonials-s1.html">Testimonials style 1</a></li>
-                                        <li><a href="testimonials-s2.html">Testimonials style 2</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">Blog</a>
-                            <ul class="sub-menu">
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="blog-right-sidebar.html">Blog right sidebar</a></li>
-                                <li><a href="blog-left-sidebar.html">Blog left sidebar</a></li>
-                                <li><a href="blog-single.html">Blog single</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
+                    <?php wp_nav_menu( array(
+                        'theme_location' => 'top',
+                        'menu_class'     => 'nav navbar-nav',
+                    ) ); ?>
                 </div><!-- end of nav-collapse -->
 
                 <div class="social-links-holder">
-                    <ul class="social-links">
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                    </ul>
+                    <?php vipindustrial_show_social_icons(); ?>
                 </div>
             </div><!-- end of container -->
         </nav>

@@ -15,6 +15,7 @@ function product_register() {
     'not_found' =>  __('No products found'),
     'not_found_in_trash' => __('No products found in Trash'),
     'parent_item_colon' => '',
+    'menu_icon' => 'dashicons-admin-generic',
     'menu_name' => 'Products'
   );
   $args = array(
@@ -26,8 +27,10 @@ function product_register() {
     'query_var' => true,
     'rewrite' => true,
     'capability_type' => 'post',
+    'register_meta_box_cb' => 'dj_product_meta',
     'hierarchical' => false,
-    'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' )
+    'taxonomies' => array('featured'),
+    'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields' )
   );
   register_post_type('products',$args);
 }
@@ -55,5 +58,39 @@ register_taxonomy('product_categories',array('products'), array(
 
 if ( function_exists( 'add_theme_support' ) ) {
 	add_theme_support( 'post-thumbnails' );
+}
+
+/**/
+//hook to add a meta box
+add_action( 'add_meta_boxes', 'dj_product_meta' );
+function dj_product_meta() {
+    //create a custom meta box
+    add_meta_box( 'dj-meta', 'Featured Product', 'dj_product_function', 'products', 'normal', 'high' );
+}
+
+function dj_product_function( $post ) {
+    //retrieve the meta data values if they exist
+    $dj_product_featured = get_post_meta( $post->ID, '_dj_product_featured', true );
+
+    echo 'Select yes below to make product featured';
+    ?>
+    <p>Featured:
+    <select name="dj_product_featured">
+        <option value="No" <?php selected( $dj_product_featured, 'no' ); ?>>No</option>
+        <option value="Yes" <?php selected( $dj_product_featured, 'yes' ); ?>>Yes</option>
+    </select>
+    </p>
+    <?php
+}
+
+//hook to save the meta box data
+add_action( 'save_post', 'dj_product_save_meta' );
+function dj_product_save_meta( $post_ID ) {
+    global $post;
+    if( $post->post_type == "products" ) {
+        if ( isset( $_POST ) ) {
+            update_post_meta( $post_ID, '_dj_product_featured', strip_tags( $_POST['dj_product_featured'] ) );
+        }
+    }
 }
 ?>
