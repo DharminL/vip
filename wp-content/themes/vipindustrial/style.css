@@ -10,3 +10,21 @@ Text Domain: vipindustrial
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+
+
+.navbar-header{ position:relative !important; z-index:999; }
+
+
+/** responsive style start here **/
+@media only screen and (min-width:1171px) and (max-width:1200px)
+{
+	#mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important; }
+}
+@media only screen and (min-width:1025px) and (max-width:1170px)
+{
+	#mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important; }
+}
+@media only screen and (min-width:992px) and (max-width:1024px)
+{
+	#mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important; }
+}
