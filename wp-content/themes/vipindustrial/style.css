@@ -28,3 +28,64 @@ Use it to make something cool, have fun, and share what you've learned with othe
 {
 	#mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important; }
 }
+@media only screen and (min-width:768px) and (max-width:991px)
+{
+	ul.mega-menu { display: none !important; }
+  .site-header #navbar.slideInn ul.mega-menu { display: block !important; }
+  .navbar-collapse{ position:relative; }
+  .navbar-collapse{ float:none !important; text-align: right !important; width: auto !important; }
+  .navbar-right{ width:auto !important; }
+  .navbar-collapse ul.mega-menu{ padding-right:0 !important; }
+  #mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important;  }
+  li.mega-menu-item{ width:100% !important; }
+  li.mega-menu-item a.mega-menu-link{ padding:15px 13px !important; left:15px !important;  }
+  .site-header #navbar.slideInn { background:#232122; }
+ .mega-sub-menu a{ padding:0 13px !important; }
+
+}
+@media only screen and (min-width:640px) and (max-width:767px)
+{
+	ul.mega-menu { display: none !important; }
+  .site-header #navbar.slideInn ul.mega-menu { display: block !important; }
+  .navbar-collapse{ position:relative; }
+  .navbar-collapse{ float:none !important; text-align: right !important; width: auto !important; }
+  .navbar-right{ width:auto !important; }
+  .navbar-collapse ul.mega-menu{ padding-right:0 !important; }
+  #mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important;  }
+  li.mega-menu-item{ width:100% !important; }
+  li.mega-menu-item a.mega-menu-link{ padding:15px 13px !important; left:15px !important;  }
+  .site-header #navbar.slideInn { background:#232122; }
+ .mega-sub-menu a{ padding:0 13px !important; }
+
+}
+@media only screen and (min-width:480px) and (max-width:639px)
+{
+	ul.mega-menu { display: none !important; }
+  .site-header #navbar.slideInn ul.mega-menu { display: block !important; }
+  .navbar-collapse{ position:relative; }
+  .navbar-collapse{ float:none !important; text-align: right !important; width: auto !important; }
+  .navbar-right{ width:auto !important; }
+  .navbar-collapse ul.mega-menu{ padding-right:0 !important; }
+  #mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important;  }
+  li.mega-menu-item{ width:100% !important; }
+  li.mega-menu-item a.mega-menu-link{ padding:15px 13px !important; left:15px !important;  }
+  .site-header #navbar.slideInn { background:#232122; width:80% !important; z-index:999; }
+ .mega-sub-menu a{ padding:0 13px !important; }
+
+}
+
+@media only screen and (min-width:320px) and (max-width:479px)
+{
+	ul.mega-menu { display: none !important; }
+  .site-header #navbar.slideInn ul.mega-menu { display: block !important; }
+  .navbar-collapse{ position:relative; }
+  .navbar-collapse{ float:none !important; text-align: right !important; width: auto !important; }
+  .navbar-right{ width:auto !important; }
+  .navbar-collapse ul.mega-menu{ padding-right:0 !important; }
+  #mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important;  }
+  li.mega-menu-item{ width:100% !important; }
+  li.mega-menu-item a.mega-menu-link{ padding:15px 13px !important; left:15px !important;  }
+  .site-header #navbar.slideInn { background:#232122; width:80% !important; z-index:999; }
+ .mega-sub-menu a{ padding:0 13px !important; }
+
+}
