@@ -93,5 +93,11 @@
     </header>
     <!-- end of header -->
 
+    <!-- start of hero -->   
+    <section class="hero hero-slider-wrapper hero-slider-s1">
+        <?php echo do_shortcode( '[custom_slickslider location="homepage-slider"]' ); ?>
+    </section>
+    <!-- end of hero slider -->
+
 	<div class="site-content-contain">
 		<div id="content" class="site-content">

@@ -596,24 +596,6 @@ require get_parent_theme_file_path( '/inc/template-tags.php' );
  */
 require get_parent_theme_file_path( '/inc/template-functions.php' );
 
-	/**
-	* Social Media icon helper functions
-	*/
-	function vipindustrial_get_social_sites() {
-		// Store social site names in array
-		$social_sites = array(
-			'facebook',
-			'twitter',
-			'linkedin',
-			'instagram',
-			'google-plus',
-			'rss',
-			'youtube',
-			'email'
-		);
-		return $social_sites;
-	}
-
 /**
  * Customizer additions.
  */
@@ -628,6 +610,28 @@ require get_parent_theme_file_path( '/inc/icon-functions.php' );
  * Products Custom post type.
  */
 require get_parent_theme_file_path( '/inc/products.php' );
+
+/**
+ * Slick Custom slider.
+ */
+require get_parent_theme_file_path( '/inc/custom-slider.php' );
+
+/**
+* Social Media icon helper functions
+*/
+function vipindustrial_get_social_sites() {
+	// Store social site names in array
+	$social_sites = array(
+		'facebook',
+		'twitter',
+		'linkedin',
+		'instagram',
+		'google-plus',
+		'rss',
+		'youtube',
+	);
+	return $social_sites;
+}
 
 // Get user input from the Customizer and output the linked social media icons
 function vipindustrial_show_social_icons() {

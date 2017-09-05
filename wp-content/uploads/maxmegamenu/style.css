@@ -1,4 +1,4 @@
-/** Sunday 3rd of September 2017 10:23:00 AM (core) **/
+/** Tuesday 5th of September 2017 07:19:45 AM (core) **/
 
 #mega-menu-wrap-top, #mega-menu-wrap-top #mega-menu-top, #mega-menu-wrap-top #mega-menu-top ul.mega-sub-menu, #mega-menu-wrap-top #mega-menu-top li.mega-menu-item, #mega-menu-wrap-top #mega-menu-top a.mega-menu-link {
   -moz-transition: none;
@@ -570,10 +570,8 @@
     border-radius: 0 0 0 0;
   }
   #mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item {
-    width: 50%;
-  }
-  #mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu > ul.mega-sub-menu > li:nth-child(odd) {
-    clear: left;
+    width: 100%;
+    clear: both;
   }
 }
 #mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu.mega-no-headers > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link {
@@ -785,7 +783,7 @@
 }
 @media only screen and (max-width: 600px) {
   #mega-menu-wrap-top .mega-menu-toggle {
-    display: block;
+    display: none;
   }
 }
 #mega-menu-wrap-top .mega-menu-toggle .mega-toggle-block {
@@ -808,7 +806,7 @@
 }
 @media only screen and (max-width: 600px) {
   #mega-menu-wrap-top .mega-menu-toggle + #mega-menu-top {
-    display: none;
+    display: block;
   }
   #mega-menu-wrap-top .mega-menu-toggle + #mega-menu-top li.mega-menu-item > ul.mega-sub-menu {
     display: none;

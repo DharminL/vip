@@ -15,7 +15,6 @@ function product_register() {
     'not_found' =>  __('No products found'),
     'not_found_in_trash' => __('No products found in Trash'),
     'parent_item_colon' => '',
-    'menu_icon' => 'dashicons-admin-generic',
     'menu_name' => 'Products'
   );
   $args = array(
@@ -29,6 +28,7 @@ function product_register() {
     'capability_type' => 'post',
     'register_meta_box_cb' => 'dj_product_meta',
     'hierarchical' => false,
+    'menu_icon' => 'dashicons-admin-generic',
     'taxonomies' => array('featured'),
     'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields' )
   );

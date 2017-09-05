@@ -928,7 +928,7 @@ final class Mega_Menu {
                 'container'       => 'div',
                 'container_class' => 'mega-menu-wrap',
                 'container_id'    => 'mega-menu-wrap-' . $sanitized_location,
-                'menu_class'      => 'nav navbar-nav mega-menu mega-menu-horizontal',
+                'menu_class'      => 'mega-menu mega-menu-horizontal',
                 'menu_id'         => 'mega-menu-' . $sanitized_location,
                 'fallback_cb'     => 'wp_page_menu',
                 'before'          => '',
