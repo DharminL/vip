@@ -9212,13 +9212,17 @@ a:focus {
 #mega-menu-wrap-top {
   clear: both;
 }
-.navbar-collapse{ position: absolute; width: 100%; }
+
 .mega-menu{ margin-right: 180px; text-align: right; }
 .navigation .container{ position:relative; }
-.navbar-collapse{ float: right !important; text-align: right !important; width: 100% !important; }
-.navbar-right{ width:100% !important; }
 .mega-sub-menu .mega-menu-item{  border-right: 1px solid #1b1f26 !important; margin-top:15px !important; padding-top:0 !important; }
 .mega-sub-menu .mega-menu-item ul li{ border-right:none !important; margin-top:0 !important; }
 .mega-sub-menu .mega-menu-item:last-child{ border-right:none !important; }
+
+@media (min-width: 991px) {
+.navbar-collapse{ position: absolute;  float: right !important; text-align: right !important; width: 100% !important; }
+.navbar-right{ width:100% !important; }
+}
+
 
 /**  megamenu css over **/
