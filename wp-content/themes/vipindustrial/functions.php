@@ -464,7 +464,7 @@ function vipindustrial_scripts() {
 	wp_enqueue_script( 'vipindustrial-plugin-collection', get_theme_file_uri( '/assets/js/jquery-plugin-collection.js' ), array(), '1.0', true );
 	wp_enqueue_script( 'vipindustrial-portfolio', get_theme_file_uri( '/assets/js/portfolio.js' ), array(), '1.0', true );
 	// Google map api
-	wp_enqueue_script( 'vipindustrial-google-map', 'https://maps.googleapis.com/maps/api/js?key', array(), '1.0', true );
+	wp_enqueue_script( 'vipindustrial-google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCYASi1EEKKgncdw8Xim7Av50zmQVXQshk', array(), '1.0', true );
     // Custom script for this template
 	wp_enqueue_script( 'vipindustrial-script', get_theme_file_uri( '/assets/js/script.js' ), array(), '1.0', true );
 

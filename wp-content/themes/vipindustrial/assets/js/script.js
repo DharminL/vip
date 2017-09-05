@@ -30,7 +30,7 @@
             if (navbar.hasClass("slideInn")) {
                 navbar.removeClass("slideInn");
             }
-            return false;            
+            return false;
         })
     }
 
@@ -40,7 +40,7 @@
     // Function for toggle a class for small menu
     function toggleClassForSmallNav() {
         var windowWidth = window.innerWidth;
-        var mainNav = $("#navbar > ul");
+        var mainNav = $("#navbar ul.mega-menu");
 
         if (windowWidth <= 991) {
             mainNav.addClass("small-nav");
