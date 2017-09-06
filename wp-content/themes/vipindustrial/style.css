@@ -13,7 +13,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 .navbar-header{ position:relative !important; z-index:999; }
-
+.mega-menu-wrap .mega-menu{ padding-right:180px !important; }
+/*.site-header #navbar{ z-index: 9999; }*/
+/*.site-header #navbar{ display:block !important; }*/
 
 /** responsive style start here **/
 @media only screen and (min-width:1171px) and (max-width:1200px)
@@ -27,6 +29,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @media only screen and (min-width:992px) and (max-width:1024px)
 {
 	#mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important; }
+	.mega-menu-wrap .mega-menu{ padding-right:0 !important; }
 }
 @media only screen and (min-width:768px) and (max-width:991px)
 {
@@ -54,8 +57,22 @@ Use it to make something cool, have fun, and share what you've learned with othe
   #mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important;  }
   li.mega-menu-item{ width:100% !important; }
   li.mega-menu-item a.mega-menu-link{ padding:15px 13px !important; left:15px !important;  }
-  .site-header #navbar.slideInn { background:#232122; }
+  .site-header #navbar.slideInn { background:#fff; }
+  .mega-menu-wrap{ background:#fff !important; }
+  .mega-menu > li.mega-menu-item{ border-bottom:1px solid #cccccc !important; }
+ .mega-menu > li.mega-menu-item > a.mega-menu-link{ color:#000 !important; text-transform:capitalize !important; font-size:0.875rem !important;  }
+ .mega-menu > li.mega-menu-item > a.mega-menu-link:hover{ color:#ff8e31 !important; }
  .mega-sub-menu a{ padding:0 13px !important; }
+ .navbar-header .open-btn{ margin-top:10px; }
+ .site-header .slideInn{ right:inherit !important; }
+ .site-header #navbar{ z-index: 9999; display:inherit !important; }
+ .mega-menu > li.mega-menu-item > a.mega-menu-link:after{ position:relative; right:10px; float:right; font-size:16px; }
+ .site-header .mega-menu li > ul.mega-sub-menu{ background:#fff !important; overflow-x:hidden !important; overflow-y:auto !important; max-height:300px; }
+ .site-header .mega-menu li > ul.mega-sub-menu li a{  display:none !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li ul.mega-sub-menu li a{  display:block !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li{ border-bottom:1px solid #cccccc !important; padding:0 !important; border-right:none !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li a{ color:#000 !important; text-transform:capitalize !important; font-size:0.875rem !important; left:0 !important;  padding:10px 13px 10px 50px !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li a:hover{ color:#ff8e31 !important; }
 
 }
 @media only screen and (min-width:480px) and (max-width:639px)
@@ -69,8 +86,24 @@ Use it to make something cool, have fun, and share what you've learned with othe
   #mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important;  }
   li.mega-menu-item{ width:100% !important; }
   li.mega-menu-item a.mega-menu-link{ padding:15px 13px !important; left:15px !important;  }
-  .site-header #navbar.slideInn { background:#232122; width:80% !important; z-index:999; }
+  .site-header #navbar.slideInn { background:#fff; width:80% !important; z-index:999; }
+  .mega-menu-wrap{ background:#fff !important; }
+  .mega-menu > li.mega-menu-item{ border-bottom:1px solid #cccccc !important; }
+ .mega-menu > li.mega-menu-item > a.mega-menu-link{ color:#000 !important; text-transform:capitalize !important; height:auto !important; line-height:inherit !important; font-size:0.875rem !important;  }
+ .mega-menu > li.mega-menu-item > a.mega-menu-link:hover{ color:#ff8e31 !important; }
  .mega-sub-menu a{ padding:0 13px !important; }
+  .navbar-header .open-btn{ margin-top:10px; }
+ .site-header .slideInn{ right:inherit !important; }
+ .site-header #navbar{ z-index: 9999; display:inherit !important; }
+ .mega-menu > li.mega-menu-item > a.mega-menu-link:after{ position:relative; right:10px; float:right; font-size:16px; }
+ .site-header .mega-menu li > ul.mega-sub-menu{ background:#fff !important; overflow-x:hidden !important; overflow-y:auto !important; max-height:300px; }
+ .site-header .mega-menu li > ul.mega-sub-menu li{ border-bottom:1px solid #cccccc !important; padding:0 !important; border-right:none !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li a{ color:#000 !important; text-transform:capitalize !important; font-size:0.875rem !important; left:0 !important;  padding:10px 13px 10px 25px !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li a:hover{ color:#ff8e31 !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li a{  display:none !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li ul.mega-sub-menu li a{  display:block !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu{ padding-top:0 !important; margin-top:0 !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li { margin-top:0 !important;  }
 
 }
 
@@ -85,7 +118,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
   #mega-menu-wrap-top #mega-menu-top{ padding-right:0 !important;  }
   li.mega-menu-item{ width:100% !important; }
   li.mega-menu-item a.mega-menu-link{ padding:15px 13px !important; left:15px !important;  }
-  .site-header #navbar.slideInn { background:#232122; width:80% !important; z-index:999; }
+  .site-header #navbar.slideInn { background:#fff; width:80% !important; z-index:999; }
+  .mega-menu-wrap{ background:#fff !important; }
+  .mega-menu > li.mega-menu-item{ border-bottom:1px solid #cccccc !important; }
+ .mega-menu > li.mega-menu-item > a.mega-menu-link{ color:#000 !important; text-transform:capitalize !important; font-size:0.875rem !important; height:auto !important; line-height:inherit !important;  }
+ .mega-menu > li.mega-menu-item > a.mega-menu-link:hover{ color:#ff8e31 !important; }
  .mega-sub-menu a{ padding:0 13px !important; }
+  .navbar-header .open-btn{ margin-top:10px; }
+ .site-header .slideInn{ right:inherit !important; }
+ .site-header #navbar{ z-index: 9999; display:inherit !important; }
+ .mega-menu > li.mega-menu-item > a.mega-menu-link:after{ position:relative; right:10px; float:right; font-size:16px; }
+ .site-header .mega-menu li > ul.mega-sub-menu{ background:#fff !important; overflow-x:hidden !important; overflow-y:auto !important; max-height:300px; }
+ .site-header .mega-menu li > ul.mega-sub-menu li{ border-bottom:1px solid #cccccc !important; padding:0 !important; border-right:none !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li a{ color:#000 !important; text-transform:capitalize !important; font-size:0.875rem !important; left:0 !important;  padding:10px 13px 10px 20px !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu{ padding-top:0 !important; margin-top:0 !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li a:hover{ color:#ff8e31 !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li a{  display:none !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li ul.mega-sub-menu li a{  display:block !important; }
+ .site-header .mega-menu li > ul.mega-sub-menu li { margin-top:0 !important;  }
 
 }

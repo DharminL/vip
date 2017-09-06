@@ -2741,7 +2741,7 @@ a:focus {
   }
   .site-header #navbar {
     background: #fff;
-    /*display: block !important;*/
+    display: block !important;
     width: 280px;
     height: 100% !important;
     margin: 0;
@@ -2751,7 +2751,7 @@ a:focus {
     position: fixed;
     right: -300px;
     top: 0;
-    /*z-index: 100;*/
+    z-index: 100;
   }
   .site-header #navbar ul a {
     color: #000;
@@ -8418,10 +8418,10 @@ a:focus {
   border-radius: 0px 0px 0px 0px;
 }
 #mega-menu-wrap-top #mega-menu-top {
-  /*visibility: visible;*/
+  visibility: visible;
   text-align: right;
   padding: 0px 0px 0px 0px;
-  /*padding-right:180px !important;*/
+  padding-right:180px !important;
 }
 @media only screen and (max-width: 600px) {
   #mega-menu-wrap-top #mega-menu-top {
