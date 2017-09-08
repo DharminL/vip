@@ -20,14 +20,14 @@ function slideshow_register() {
 
     $args = array(
         'labels' => $labels,
-        'public' => true,
-        'publicly_queryable' => true,
+        'public' => false,
         'show_ui' => true,
         'query_var' => true,
         'rewrite' => true,
         'capability_type' => 'post',
         'hierarchical' => false,
         'menu_position' => null,
+        'exclude_from_search' => true,
         'menu_icon' => 'dashicons-images-alt',
         'supports' => array( 'title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes')
       );

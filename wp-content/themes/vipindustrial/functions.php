@@ -321,25 +321,50 @@ function vipindustrial_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
-	register_sidebar( array(
-		'name'          => __( 'Footer 1', 'vipindustrial' ),
-		'id'            => 'sidebar-2',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'vipindustrial' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	// First footer widget area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name' => __( 'First Footer Column', 'vipindustrial' ),
+        'id' => 'first-footer-widget-area',
+        'description' => __( 'The first footer widget area', 'vipindustrial' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ) );
 
-	register_sidebar( array(
-		'name'          => __( 'Footer 2', 'vipindustrial' ),
-		'id'            => 'sidebar-3',
-		'description'   => __( 'Add widgets here to appear in your footer.', 'vipindustrial' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+    // Second Footer Widget Area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name' => __( 'Second Footer Column Area', 'vipindustrial' ),
+        'id' => 'second-footer-widget-area',
+        'description' => __( 'The second footer widget area', 'vipindustrial' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ) );
+
+    // Third Footer Widget Area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name' => __( 'Third Footer Column', 'vipindustrial' ),
+        'id' => 'third-footer-widget-area',
+        'description' => __( 'The third footer widget area', 'vipindustrial' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ) );
+
+    // Fourth Footer Widget Area, located in the footer. Empty by default.
+    register_sidebar( array(
+        'name' => __( 'Forth Footer Column', 'vipindustrial' ),
+        'id' => 'fourth-footer-widget-area',
+        'description' => __( 'The forth footer widget area', 'vipindustrial' ),
+        'before_widget' => '',
+        'after_widget' => '',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>',
+    ) );
+
 }
 add_action( 'widgets_init', 'vipindustrial_widgets_init' );
 
@@ -435,10 +460,6 @@ function vipindustrial_scripts() {
 	// Custom styles for this template
 	wp_enqueue_style( 'vipindustrial-main-style', get_theme_file_uri( '/assets/css/style.css' ), array( 'vipindustrial-style' ), '1.0' );
 
-	// Load the dark colorscheme.
-	/*if ( 'dark' === get_theme_mod( 'colorscheme', 'light' ) || is_customize_preview() ) {
-		wp_enqueue_style( 'vipindustrial-colors-dark', get_theme_file_uri( '/assets/css/colors-dark.css' ), array( 'vipindustrial-style' ), '1.0' );
-	}*/
 
 	// Load the Internet Explorer 9 specific stylesheet, to fix display issues in the Customizer.
 	if ( is_customize_preview() ) {
@@ -454,8 +475,6 @@ function vipindustrial_scripts() {
 	wp_enqueue_script( 'html5', get_theme_file_uri( '/assets/js/html5.js' ), array(), '3.7.3' );
 	wp_script_add_data( 'html5', 'conditional', 'lt IE 9' );
 
-	//wp_enqueue_script( 'vipindustrial-skip-link-focus-fix', get_theme_file_uri( '/assets/js/skip-link-focus-fix.js' ), array(), '1.0', true );
-
 	// All Javascripts
 	wp_enqueue_script( 'vipindustrial-jquery-main', get_theme_file_uri( '/assets/js/jquery.min.js' ), array(), '1.0', true );
 	wp_enqueue_script( 'vipindustrial-bootstrap', get_theme_file_uri( '/assets/js/bootstrap.min.js' ), array(), '1.0', true );
@@ -467,23 +486,6 @@ function vipindustrial_scripts() {
 	wp_enqueue_script( 'vipindustrial-google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCYASi1EEKKgncdw8Xim7Av50zmQVXQshk', array(), '1.0', true );
     // Custom script for this template
 	wp_enqueue_script( 'vipindustrial-script', get_theme_file_uri( '/assets/js/script.js' ), array(), '1.0', true );
-
-	/*$vipindustrial_l10n = array(
-		'quote'          => vipindustrial_get_svg( array( 'icon' => 'quote-right' ) ),
-	);*/
-
-	/*if ( has_nav_menu( 'top' ) ) {
-		wp_enqueue_script( 'vipindustrial-navigation', get_theme_file_uri( '/assets/js/navigation.js' ), array( 'jquery' ), '1.0', true );
-		$vipindustrial_l10n['expand']         = __( 'Expand child menu', 'vipindustrial' );
-		$vipindustrial_l10n['collapse']       = __( 'Collapse child menu', 'vipindustrial' );
-		$vipindustrial_l10n['icon']           = vipindustrial_get_svg( array( 'icon' => 'angle-down', 'fallback' => true ) );
-	}*/
-
-	//wp_enqueue_script( 'vipindustrial-global', get_theme_file_uri( '/assets/js/global.js' ), array( 'jquery' ), '1.0', true );
-
-	//wp_enqueue_script( 'jquery-scrollto', get_theme_file_uri( '/assets/js/jquery.scrollTo.js' ), array( 'jquery' ), '2.1.2', true );
-
-	//wp_localize_script( 'vipindustrial-skip-link-focus-fix', 'vipindustrialScreenReaderText', $vipindustrial_l10n );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -663,53 +665,20 @@ function vipindustrial_show_social_icons() {
 		echo "</ul>";
 	}
 }
-function tutsplus_widgets_init() {
- 
-    // First footer widget area, located in the footer. Empty by default.
-    register_sidebar( array(
-        'name' => __( 'First Footer Widget Area', 'tutsplus' ),
-        'id' => 'first-footer-widget-area',
-        'description' => __( 'The first footer widget area', 'tutsplus' ),
-        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ) );
- 
-    // Second Footer Widget Area, located in the footer. Empty by default.
-    register_sidebar( array(
-        'name' => __( 'Second Footer Widget Area', 'tutsplus' ),
-        'id' => 'second-footer-widget-area',
-        'description' => __( 'The second footer widget area', 'tutsplus' ),
-        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ) );
- 
-    // Third Footer Widget Area, located in the footer. Empty by default.
-    register_sidebar( array(
-        'name' => __( 'Third Footer Widget Area', 'tutsplus' ),
-        'id' => 'third-footer-widget-area',
-        'description' => __( 'The third footer widget area', 'tutsplus' ),
-        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ) );
- 
-    // Fourth Footer Widget Area, located in the footer. Empty by default.
-    register_sidebar( array(
-        'name' => __( 'Fourth Footer Widget Area', 'tutsplus' ),
-        'id' => 'fourth-footer-widget-area',
-        'description' => __( 'The fourth footer widget area', 'tutsplus' ),
-        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h3 class="widget-title">',
-        'after_title' => '</h3>',
-    ) );
-         
+
+function vipindustrial_sanitize_email( $email, $setting ) {
+	return ( is_email($email) ? $email : $setting->default );
 }
- 
-// Register sidebars by running tutsplus_widgets_init() on the widgets_init hook.
-add_action( 'widgets_init', 'tutsplus_widgets_init' );
+
+function vipindustrial_sanitize_number_absint( $number, $setting ) {
+  // If the input is an absolute integer, return it; otherwise, return the default
+  return ( $number ? $number : $setting->default );
+}
+
+function vipindustrial_display_email() {
+	echo '<i class="fa fa-envelope-o" aria-hidden="true"></i>'. get_theme_mod( 'vipindustrial_email' );
+}
+
+function vipindustrial_display_phonenumber() {
+	echo '<i class="fa fa-volume-control-phone" aria-hidden="true"></i>'. get_theme_mod( 'vipindustrial_phone' );
+}

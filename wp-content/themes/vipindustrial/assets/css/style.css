@@ -3953,7 +3953,7 @@ a:focus {
   }
 }
 
-.site-footer .widget > h2 {
+.site-footer .widget > h3 {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: normal;
@@ -3962,14 +3962,14 @@ a:focus {
 }
 
 @media (max-width: 1199px) {
-  .site-footer .widget > h2 {
+  .site-footer .widget > h3 {
     font-size: 20px;
     font-size: 1.25rem;
   }
 }
 
 @media (max-width: 767px) {
-  .site-footer .widget > h2 {
+  .site-footer .widget > h3 {
     font-size: 18px;
     font-size: 1.125rem;
   }
@@ -8602,7 +8602,7 @@ a:focus {
   font-weight: normal;
   text-decoration: none;
   border-color: #fff;*/
-  color: #ff8e31;
+  color: #ee1c25;
 }
 #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.mega-current-menu-item > a.mega-menu-link, #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.mega-current-menu-ancestor > a.mega-menu-link, #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item.mega-current-page-ancestor > a.mega-menu-link {
   /*background: #333;
@@ -8610,7 +8610,7 @@ a:focus {
   font-weight: normal;
   text-decoration: none;
   border-color: #fff;*/
-  color: #ff8e31;
+  color: #ee1c25;
 }
 #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item > a.mega-menu-link {
   /*border-top: 0px solid #fff;
@@ -8682,7 +8682,7 @@ a:focus {
     padding: 0 10px;
   }
 }
-#mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu > ul.mega-sub-menu {
+#mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu > ul.mega-sub-menu, #mega-menu-wrap-top #mega-menu-top > li.mega-menu-flyout > ul.mega-sub-menu {
   z-index: 999;
   /*-webkit-border-radius: 0px 0px 0px 0px;
   -moz-border-radius: 0px 0px 0px 0px;
@@ -8699,7 +8699,7 @@ a:focus {
   border-bottom: 0px solid #fff;*/
   left: 0;
   background-color: #15191f;
-    border-top: 2px solid #ff8e31;
+  border-top: 2px solid #ee1c25;
 }
 @media only screen and (max-width: 600px) {
   #mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu > ul.mega-sub-menu {
@@ -8922,7 +8922,7 @@ a:focus {
   padding-bottom:14px;	
 }
 #mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item li.mega-menu-item > a.mega-menu-link:hover, #mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-item li.mega-menu-item > a.mega-menu-link:focus {
-  color: #ff8e31;
+  color: #ee1c25;
   font-weight: normal;
   text-decoration: none;
   background: rgba(0, 0, 0, 0);
@@ -8965,12 +8965,14 @@ a:focus {
   z-index: 999;
   position: absolute;
   width: 150px;
-  border-top: 0px solid #fff;
+  /*border-top: 0px solid #fff;
   border-left: 0px solid #fff;
   border-right: 0px solid #fff;
   border-bottom: 0px solid #fff;
   padding: 0px 0px 0px 0px;
-  background: #f1f1f1;
+  background: #f1f1f1;*/
+  background-color: #15191f;
+  border-top: 2px solid #ee1c25;
 }
 @media only screen and (max-width: 600px) {
   #mega-menu-wrap-top #mega-menu-top > li.mega-menu-flyout ul.mega-sub-menu {

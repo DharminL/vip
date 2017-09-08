@@ -29,9 +29,44 @@ function vipindustrial_customize_register( $wp_customize ) {
 	/**
 	 * Custom colors.
 	 */
-	$wp_customize->remove_section("colors");
+	$wp_customize->remove_section( 'colors' );
 	$wp_customize->remove_section( 'custom_css' );
+	$wp_customize->remove_section( 'header_image' );
 
+	/**
+	 * Email address for site
+	**/
+	$wp_customize->add_setting( 'vipindustrial_email', array(
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'default' => '',
+		'sanitize_callback' => 'vipindustrial_sanitize_email',
+	) );
+
+	$wp_customize->add_control( 'vipindustrial_email', array(
+		'type' => 'email',
+		'section' => 'title_tagline', // Required, core or custom.
+		'label' => __( 'Email Address' ),
+		'description' => __( 'Enter Site email address' ),
+		'input_attrs' => array(
+			'placeholder' => __( 'email@domain.com' ),
+		),
+		'priority' => 50,
+	) );
+
+	$wp_customize->add_setting( 'vipindustrial_phone', array(
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'vipindustrial_sanitize_number_absint',
+		'default' => 0123456789,
+	) );
+
+	$wp_customize->add_control( 'vipindustrial_phone', array(
+		'type' => 'text',
+		'section' => 'title_tagline', // Add a default or your own section
+		'label' => __( 'Contact Number' ),
+		'description' => __( 'Enter contact number.' ),
+		'priority' => 50,
+	) );
 
 	/**
 	* Social site icons for Quick Menu bar
