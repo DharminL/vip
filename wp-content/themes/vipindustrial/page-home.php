@@ -52,7 +52,7 @@ get_header(); ?>
 <!-- end of services-serction-s1 -->
 
 <!-- start of how-we-work --> 
-        <section class="how-we-work section-padding" style="background: url(<?php echo cfs()->get( 'why_choose_vip_image' ); ?>) center center/cover no-repeat local;">
+        <section class="how-we-work section-padding" style="background: url(<?php echo cfs()->get( 'why_choose_vip_image' ); ?>) top center/cover no-repeat local; background-size:auto 385px;">
             <div class="container">
                 <div class="row section-title-s6">
                     <div class="col col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -123,6 +123,139 @@ get_header(); ?>
             </div> <!-- end container -->
         </section>
 <!-- end of testimonial-section -->
+
+<!-- start of latest-projects --> 
+        <section class="latest-projects section-padding">
+            <div class="container">
+                <div class="row section-title-s3">
+                    <div class="col col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <h2>Our latest <span>Projects</span></h2>
+                      <p>Mauris ornare tellus et cursus volutpat. Praesent neque justo, dapibus id vestibulum nec, accumsan vitae sapien. Curabitur tempus tortor sit amet sapien.</p>
+                  </div>
+                </div> <!-- end section-title -->
+
+                <div class="portfolio gallery-grid">
+                    <div class="row">
+                        <ul class="portfolio-sorting gallery-button list-inline text-center">
+                            <li><a href="#" data-group="all" class="filter-btn active">All</a></li>
+                          <li><a class="filter-btn" href="#" data-group="people">Factory</a></li>
+                          <li><a class="filter-btn" href="#" data-group="simpsons">Welding</a></li>
+                          <li><a class="filter-btn" href="#" data-group="futurama">Rolling</a></li>
+                      </ul> <!--end portfolio sorting -->
+
+                        <div id="lightBox" class="gallery-wrapper">
+                            <ul class="portfolio-items courses list-unstyled" id="grid">
+                                <li class="col-md-3 col-sm-6" data-groups='["simpsons"]'>
+                                    <figure class="portfolio-item gallery-caption grid">
+                                        
+                                        <div class="inner">
+                                            <a href="images/latest-projects/img-1.jpg" class="fancybox">
+                                                <img src="images/latest-projects/img-1.jpg" alt="">                                            </a>                                        </div>
+
+                                        <div class="project-title">
+                                            <h3><a href="#">Rolling Sheets</a></h3>
+                                        </div>
+                                    </figure>
+                                </li>
+
+                                <li class="col-md-3 col-sm-6" data-groups='["people"]'>
+                                    <figure class="portfolio-item gallery-caption grid">
+                                        
+                                        <div class="inner">
+                                            <a href="images/latest-projects/img-2.jpg" class="fancybox">
+                                                <img src="images/latest-projects/img-2.jpg" alt="">                                            </a>                                        </div>
+
+                                        <div class="project-title">
+                                            <h3><a href="#">Rolling Sheets</a></h3>
+                                        </div>
+                                    </figure>
+                                </li>
+
+                                <li class="col-md-3 col-sm-6" data-groups='["futurama"]'>
+                                    <figure class="portfolio-item gallery-caption grid">
+                                        
+                                        <div class="inner">
+                                            <a href="images/latest-projects/img-3.jpg" class="fancybox">
+                                                <img src="images/latest-projects/img-3.jpg" alt="">                                            </a>                                        </div>
+
+                                        <div class="project-title">
+                                            <h3><a href="#">Rolling Sheets</a></h3>
+                                        </div>
+                                    </figure>
+                                </li>
+
+                                <li class="col-md-3 col-sm-6" data-groups='["futurama"]'>
+                                    <figure class="portfolio-item gallery-caption grid">
+                                        
+                                        <div class="inner">
+                                            <a href="images/latest-projects/img-4.jpg" class="fancybox">
+                                                <img src="images/latest-projects/img-4.jpg" alt="">                                            </a>                                        </div>
+
+                                        <div class="project-title">
+                                            <h3><a href="#">Rolling Sheets</a></h3>
+                                        </div>
+                                    </figure>
+                                </li>
+
+                                <li class="col-md-3 col-sm-6" data-groups='["simpsons"]'>
+                                    <figure class="portfolio-item gallery-caption grid">
+                                        
+                                        <div class="inner">
+                                            <a href="images/latest-projects/img-5.jpg" class="fancybox">
+                                                <img src="images/latest-projects/img-5.jpg" alt="">                                            </a>                                        </div>
+
+                                        <div class="project-title">
+                                            <h3><a href="#">Rolling Sheets</a></h3>
+                                        </div>
+                                    </figure>
+                                </li>
+
+                                <li class="col-md-3 col-sm-6" data-groups='["people"]'>
+                                    <figure class="portfolio-item gallery-caption grid">
+                                        
+                                        <div class="inner">
+                                            <a href="images/latest-projects/img-6.jpg" class="fancybox">
+                                                <img src="images/latest-projects/img-6.jpg" alt="">                                            </a>                                        </div>
+
+                                        <div class="project-title">
+                                            <h3><a href="#">Rolling Sheets</a></h3>
+                                        </div>
+                                    </figure>
+                                </li>
+
+                                <li class="col-md-3 col-sm-6" data-groups='["simpsons"]'>
+                                    <figure class="portfolio-item gallery-caption grid">
+                                        
+                                        <div class="inner">
+                                            <a href="images/latest-projects/img-7.jpg" class="fancybox">
+                                                <img src="images/latest-projects/img-7.jpg" alt="">                                            </a>                                        </div>
+
+                                        <div class="project-title">
+                                            <h3><a href="#">Rolling Sheets</a></h3>
+                                        </div>
+                                    </figure>
+                                </li>
+
+                                <li class="col-md-3 col-sm-6" data-groups='["people"]'>
+                                    <figure class="portfolio-item gallery-caption grid">
+                                        
+                                        <div class="inner">
+                                            <a href="images/latest-projects/img-8.jpg" class="fancybox">
+                                                <img src="images/latest-projects/img-8.jpg" alt="">                                            </a>                                        </div>
+
+                                        <div class="project-title">
+                                            <h3><a href="#">Rolling Sheets</a></h3>
+                                        </div>
+                                    </figure>
+                                </li>
+                            </ul> <!--end portfolio grid -->
+                        </div> <!-- gallery-wrapper -->
+                    </div> <!--end row -->
+                </div>
+            </div> <!-- end container -->
+        </section>
+<!-- end of latest-projects -->
+
 
 <!-- start of contact-section --> 
         <section class="contact-section">
