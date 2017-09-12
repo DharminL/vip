@@ -36,16 +36,7 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_po
                     <div class="blog-content col col-lg-8 col-md-8">
                         <div class="row blog-s2-grids">
                             <?php
-								$args = array(
-								'post_type'      => 'post',
-								'orderby'        => 'name',
-								'order'          => 'ASC',
-								'posts_per_page' => 6
-								); 
-								query_posts( $args );
-								// The Loop
 								while ( have_posts() ) : the_post();
-								
 							?>
                             <div class="col col-sm-6">
                                 <div class="grid">
@@ -63,15 +54,11 @@ $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_po
                                     </div>
                                 </div>
                             </div>
-                            <?php endwhile; ?>
+                            <?php  endwhile; ?>
                         </div> <!-- end row -->
 
                         <div class="pagination">
-                            <ul>
-                                <li class="current"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                            </ul>
+   						<?php wpbeginner_numeric_posts_nav(); ?>                    
                         </div>                
                     </div> <!-- end blog-content -->
 

@@ -867,4 +867,40 @@
 
 });
 
+$(window).on("resize", function() {
+        toggleClassForSmallNav();
+        //smallNavFunctionality();
+
+        clearTimeout($.data(this, 'resizeTimer'));
+        $.data(this, 'resizeTimer', setTimeout(function() {
+            smallNavFunctionality();
+        }, 200));
+    });
+	
+	//equal height
+	
+	$(document).ready(function(){
+
+    // Select and loop the container element of the elements you want to equalise
+    $('.portfolio').each(function(){  
+      
+      // Cache the highest
+      var highestBox = 0;
+      
+      // Select and loop the elements you want to equalise
+      $('.col-md-3', this).each(function(){
+        
+        // If this box is higher than the cached highest then store it
+        if($(this).height() > highestBox) {
+          highestBox = $(this).height(); 
+        }
+      
+      });  
+            
+      // Set the height of all those children to whichever was highest 
+      $('.col-md-3',this).height(highestBox);
+                    
+    }); 
+
+});
 })(window.jQuery);

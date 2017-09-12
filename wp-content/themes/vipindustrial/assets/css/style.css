@@ -6542,11 +6542,12 @@ a:focus {
 }
 
 .clients-section .client-pic {
-  background-color: #eae6e4;
+  /*background-color: #eae6e4;*/
+  background-color: #ffffff;
   width: 40%;
   float: left;
   text-align: center;
-  padding: 60px 15px;
+  padding: 0;
 }
 
 @media (max-width: 991px) {
@@ -7693,6 +7694,9 @@ a:focus {
 .blog-details-page {
   background-color: #f2f2f2;
 }
+.single-products.blog-details-page {
+  background-color: #ffffff;
+}
 
 .blog-details-page .blog-single-content {
   /*** post ***/
@@ -8260,7 +8264,7 @@ a:focus {
 /*--------------------------------------------------------------
 	all projects page
 --------------------------------------------------------------*/
-.projects-s1-pg .latest-projects {
+.projects-s1-pg .latest-projects, .tax-product_categories .latest-projects {
   background-image: none;
   background-color: #e8e8e7;
 }
@@ -8283,7 +8287,7 @@ a:focus {
   }
 }
 
-.projects-s1-pg .latest-projects:before {
+.projects-s1-pg .latest-projects:before, .tax-product_categories .latest-projects:before {
   display: none;
 }
 
@@ -9222,3 +9226,51 @@ a:focus {
 /**  megamenu css over **/
 .how-we-work{ padding-bottom:0 !important; }
 .widget widget_search .widget-title{display:none;}
+.widget_categories{ margin-bottom:75px; width:100%; float:left; }
+.widget_categories ul li{ width:100%; float:left; margin:0px 0 10px 0; }
+.widget_categories ul li:last-child{ margin-bottom:0; }
+.widget_categories ul li:last-child a{ padding-bottom:0 !important; }
+.widget_categories ul li a{ padding:0 0 10px 0 !important; }
+.social-links-holder{ z-index:999999; }
+.recent-posts-widget-with-thumbnails a{ line-height:1.1; }
+.recent-posts-widget-with-thumbnails a span{ color: #000; font-size: 1rem; margin: 0.5em 0 0.9em; text-transform: capitalize; font-family: "Merriweather", serif; font-weight: bold; display:table; }  
+.recent-posts-widget-with-thumbnails .rpwwt-post-date{ font-size: 0.75rem; color: #666666; text-transform: uppercase; }
+.post-title-meta .btn{ padding:4px 13px !important; }
+.post-title-meta .btn .post-categories{ margin-bottom:0 !important; }
+.post-title-meta .btn .post-categories li{ margin-right:0 !important; line-height:inherit; padding-right:0 !important; }
+.post-title-meta .btn .post-categories li a{ color:#fff !important; font-size:0.75rem; vertical-align:top; position:relative; top:1px; font-weight:400; }
+.blog-single-content .tag-share div{ float:left !important; }
+.blog-single-content .tag-share ul li{  }
+.blog-single-content .tag-share ul li a{ background-color: #fff; font-size: 14px; color: #333333; display: inline-block; text-align: center;
+padding: 7px 15px; text-transform: lowercase; }  
+.blog-single-content .tag-share ul li a:hover{ background-color: #15191f; color: #fff; }
+.recent-posts-widget-with-thumbnails a span:hover{ color:#ee1c25; }
+.recent-posts-widget-with-thumbnails ul li > a{ width:100%; }
+.widget_tag_cloud .tagcloud{ margin-left:-12px; }
+.widget_tag_cloud .tagcloud a.tag-cloud-link{ font-size: 0.9375rem !important; font-weight: bold; transition: all 0.3s; display: inline-block;
+padding: 6px 12px; color: gray; line-height: 1.42857143; text-align: center; touch-action: manipulation; cursor: pointer; white-space: nowrap; vertical-align: middle; }
+.widget_tag_cloud .tagcloud a.tag-cloud-link:hover{ color:#ee1c25; }
+.faq-accordion .box{ width:24%; position:relative; float:left; min-height:90px; margin-bottom:15px; overflow:hidden; max-height:90px; border:1px solid #efefef; margin-right:10px; transition: all 0.5s ease-in-out; }
+.faq-accordion .box:hover{ background:#f9f9f9; }
+.faq-accordion .box:nth-child(4n){ margin-right:0; }
+.faq-accordion .box img{ position: absolute; left: 50%; top: 50%; -webkit-transform: translateY(-50%) translateX(-50%);  }
+
+
+/** mediaquery start here **/
+
+@media only screen and (min-width: 768px) and (max-width: 991px){ 
+.faq-accordion .box{ width: 23.80%; }
+}
+@media only screen and (min-width: 640px) and (max-width: 767px){ 
+.faq-accordion .box{ width: 23.68%; }
+}
+@media only screen and (min-width: 480px) and (max-width: 639px){ 
+.faq-accordion .box{ width: 31.70%; }
+.faq-accordion .box:nth-child(3n){ margin-right:0; }
+.faq-accordion .box:nth-child(4n){ margin-right:10px; }
+}
+@media only screen and (min-width: 320px) and (max-width: 479px){ 
+.faq-accordion .box{ width: 48%; }
+.faq-accordion .box:nth-child(even){ margin-right:0; }
+.faq-accordion .box:nth-child(odd){ margin-right:10px; }
+}

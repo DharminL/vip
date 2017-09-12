@@ -142,7 +142,8 @@ get_header(); ?>
                             <ul class="portfolio-items courses list-unstyled" id="grid">
 							<?php
 								$args = array( 
-								'post_type' => 'products', 
+								'post_type' => 'products',
+								'posts_per_page'=>'8', 
 								'meta_query' => array( 
 								array( 'key' => '_dj_product_featured', 
 										'value' => 'Yes' ) ) ); 
@@ -155,8 +156,8 @@ get_header(); ?>
                                     <figure class="portfolio-item gallery-caption grid">
                                         
                                         <div class="inner">
-                                            <a href="<?php echo get_the_permalink(); ?>" class="fancybox">
-                                                <img src="<?php echo wp_get_attachment_image_url( $post_thumbnail_id ); ?>" alt="">                                            </a>                                        </div>
+                                            <a href="<?php echo wp_get_attachment_image_url( $post_thumbnail_id,'full' ); ?>" class="fancybox">
+                                                <img src="<?php echo wp_get_attachment_image_url( $post_thumbnail_id,'full' ); ?>" alt="<?php echo get_the_title(); ?>">                                            </a>                                        </div>
 
                                         <div class="project-title">
                                             <h3><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
