@@ -71,26 +71,26 @@ function dj_product_meta() {
 function dj_product_function( $post ) {
     //retrieve the meta data values if they exist
     $dj_product_featured = get_post_meta( $post->ID, '_dj_product_featured', true );
-
     echo 'Select yes below to make product featured';
     ?>
     <p>Featured:
     <select name="dj_product_featured">
-        <option value="No" <?php selected( $dj_product_featured, 'no' ); ?>>No</option>
-        <option value="Yes" <?php selected( $dj_product_featured, 'yes' ); ?>>Yes</option>
+        <option value="No" <?php selected( $dj_product_featured, 'No' ); ?>>No</option>
+        <option value="Yes" <?php selected( $dj_product_featured, 'Yes' ); ?>>Yes</option>
     </select>
     </p>
     <?php
 }
-
 //hook to save the meta box data
 add_action( 'save_post', 'dj_product_save_meta' );
 function dj_product_save_meta( $post_ID ) {
-    global $post;
+    print($post_ID);
+	global $post;
     if( $post->post_type == "products" ) {
         if ( isset( $_POST ) ) {
             update_post_meta( $post_ID, '_dj_product_featured', strip_tags( $_POST['dj_product_featured'] ) );
         }
     }
 }
+
 ?>
