@@ -27,14 +27,14 @@ get_header(); ?>
                     </div>
                 </div> <!-- end section-title -->
         
-                <div class="row services-s2-grids">
+                <div class="row services-s2-grids containere">
                     <?php 
 					$fields='';
 					$field='';
 					$fields = CFS()->get( 'service_box' );
 					foreach ( $fields as $field ) {
 					?>
-                    <div class="col col-lg-4 col-xs-6">
+                    <div class="col col-lg-4 col-xs-6 column">
                         <div class="grid">
                             <div class="img-holder">
                                 <img src="<?php echo $field['service_image']; ?>" alt class="img img-responsive">
@@ -100,7 +100,9 @@ get_header(); ?>
 								$fields='';
 								$field='';
 								$fields = CFS()->get( 'testimonial_box' );
+								$i=0;
 								foreach ( $fields as $field ) {
+								if($i<6){
 							?>
                             <div class="grid">
                                 <div class="client-quote">
@@ -116,7 +118,7 @@ get_header(); ?>
                                     </div>
                                 </div>
                             </div>
-                            <?php } ?>
+                            <?php $i++; } }  ?>
                         </div>
                     </div>
                 </div> <!-- end row -->
@@ -129,125 +131,39 @@ get_header(); ?>
             <div class="container">
                 <div class="row section-title-s3">
                     <div class="col col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                        <h2>Our latest <span>Projects</span></h2>
-                      <p>Mauris ornare tellus et cursus volutpat. Praesent neque justo, dapibus id vestibulum nec, accumsan vitae sapien. Curabitur tempus tortor sit amet sapien.</p>
+                        <h2><?php echo cfs()->get( 'product_title' ); ?></h2>
+                      <p><?php echo cfs()->get( 'product_content' ); ?></p>
                   </div>
                 </div> <!-- end section-title -->
 
                 <div class="portfolio gallery-grid">
                     <div class="row">
-                        <ul class="portfolio-sorting gallery-button list-inline text-center">
-                            <li><a href="#" data-group="all" class="filter-btn active">All</a></li>
-                          <li><a class="filter-btn" href="#" data-group="people">Factory</a></li>
-                          <li><a class="filter-btn" href="#" data-group="simpsons">Welding</a></li>
-                          <li><a class="filter-btn" href="#" data-group="futurama">Rolling</a></li>
-                      </ul> <!--end portfolio sorting -->
-
                         <div id="lightBox" class="gallery-wrapper">
                             <ul class="portfolio-items courses list-unstyled" id="grid">
+							<?php
+								$args = array( 
+								'post_type' => 'products', 
+								'meta_query' => array( 
+								array( 'key' => '_dj_product_featured', 
+										'value' => 'Yes' ) ) ); 
+								$fproducts = new WP_Query( $args );
+								if ( $fproducts -> have_posts() ) {
+								while ( $fproducts -> have_posts() ) {$fproducts->the_post();
+								$post_thumbnail_id = get_post_thumbnail_id( $post_ID );
+								?>
                                 <li class="col-md-3 col-sm-6" data-groups='["simpsons"]'>
                                     <figure class="portfolio-item gallery-caption grid">
                                         
                                         <div class="inner">
-                                            <a href="images/latest-projects/img-1.jpg" class="fancybox">
-                                                <img src="images/latest-projects/img-1.jpg" alt="">                                            </a>                                        </div>
+                                            <a href="<?php echo get_the_permalink(); ?>" class="fancybox">
+                                                <img src="<?php echo wp_get_attachment_image_url( $post_thumbnail_id ); ?>" alt="">                                            </a>                                        </div>
 
                                         <div class="project-title">
-                                            <h3><a href="#">Rolling Sheets</a></h3>
+                                            <h3><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h3>
                                         </div>
                                     </figure>
                                 </li>
-
-                                <li class="col-md-3 col-sm-6" data-groups='["people"]'>
-                                    <figure class="portfolio-item gallery-caption grid">
-                                        
-                                        <div class="inner">
-                                            <a href="images/latest-projects/img-2.jpg" class="fancybox">
-                                                <img src="images/latest-projects/img-2.jpg" alt="">                                            </a>                                        </div>
-
-                                        <div class="project-title">
-                                            <h3><a href="#">Rolling Sheets</a></h3>
-                                        </div>
-                                    </figure>
-                                </li>
-
-                                <li class="col-md-3 col-sm-6" data-groups='["futurama"]'>
-                                    <figure class="portfolio-item gallery-caption grid">
-                                        
-                                        <div class="inner">
-                                            <a href="images/latest-projects/img-3.jpg" class="fancybox">
-                                                <img src="images/latest-projects/img-3.jpg" alt="">                                            </a>                                        </div>
-
-                                        <div class="project-title">
-                                            <h3><a href="#">Rolling Sheets</a></h3>
-                                        </div>
-                                    </figure>
-                                </li>
-
-                                <li class="col-md-3 col-sm-6" data-groups='["futurama"]'>
-                                    <figure class="portfolio-item gallery-caption grid">
-                                        
-                                        <div class="inner">
-                                            <a href="images/latest-projects/img-4.jpg" class="fancybox">
-                                                <img src="images/latest-projects/img-4.jpg" alt="">                                            </a>                                        </div>
-
-                                        <div class="project-title">
-                                            <h3><a href="#">Rolling Sheets</a></h3>
-                                        </div>
-                                    </figure>
-                                </li>
-
-                                <li class="col-md-3 col-sm-6" data-groups='["simpsons"]'>
-                                    <figure class="portfolio-item gallery-caption grid">
-                                        
-                                        <div class="inner">
-                                            <a href="images/latest-projects/img-5.jpg" class="fancybox">
-                                                <img src="images/latest-projects/img-5.jpg" alt="">                                            </a>                                        </div>
-
-                                        <div class="project-title">
-                                            <h3><a href="#">Rolling Sheets</a></h3>
-                                        </div>
-                                    </figure>
-                                </li>
-
-                                <li class="col-md-3 col-sm-6" data-groups='["people"]'>
-                                    <figure class="portfolio-item gallery-caption grid">
-                                        
-                                        <div class="inner">
-                                            <a href="images/latest-projects/img-6.jpg" class="fancybox">
-                                                <img src="images/latest-projects/img-6.jpg" alt="">                                            </a>                                        </div>
-
-                                        <div class="project-title">
-                                            <h3><a href="#">Rolling Sheets</a></h3>
-                                        </div>
-                                    </figure>
-                                </li>
-
-                                <li class="col-md-3 col-sm-6" data-groups='["simpsons"]'>
-                                    <figure class="portfolio-item gallery-caption grid">
-                                        
-                                        <div class="inner">
-                                            <a href="images/latest-projects/img-7.jpg" class="fancybox">
-                                                <img src="images/latest-projects/img-7.jpg" alt="">                                            </a>                                        </div>
-
-                                        <div class="project-title">
-                                            <h3><a href="#">Rolling Sheets</a></h3>
-                                        </div>
-                                    </figure>
-                                </li>
-
-                                <li class="col-md-3 col-sm-6" data-groups='["people"]'>
-                                    <figure class="portfolio-item gallery-caption grid">
-                                        
-                                        <div class="inner">
-                                            <a href="images/latest-projects/img-8.jpg" class="fancybox">
-                                                <img src="images/latest-projects/img-8.jpg" alt="">                                            </a>                                        </div>
-
-                                        <div class="project-title">
-                                            <h3><a href="#">Rolling Sheets</a></h3>
-                                        </div>
-                                    </figure>
-                                </li>
+								<?php } } wp_reset_query(); ?>
                             </ul> <!--end portfolio grid -->
                         </div> <!-- gallery-wrapper -->
                     </div> <!--end row -->

@@ -69,6 +69,25 @@ function vipindustrial_customize_register( $wp_customize ) {
 	) );
 
 	/**
+	* site address
+	*/
+	$wp_customize->add_section( 'map_settings', array(
+		'title' => __( 'Address For Map', 'vipindustrial' ),
+		'priority' => 150,
+	));
+	$wp_customize->add_setting( 'vipindustrial_map', array(
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'vipindustrial_sanitize_map',
+		'default' => '-31.985184, 115.943483',
+	) );
+	$wp_customize->add_control( 'vipindustrial_map', array(
+		'type'     => 'text',
+		'section' => 'map_settings', // Add a default or your own section
+		'label' => __( 'Map Address' ),
+		'description' => __( 'Enter Address For Map' ),
+		'priority' => 50,
+	) );
+	/**
 	* Social site icons for Quick Menu bar
 	*/
 	$wp_customize->add_section( 'social_settings', array(

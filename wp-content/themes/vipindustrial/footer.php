@@ -46,7 +46,115 @@
         </footer>
 	</div><!-- .site-content-contain -->
 </div><!-- end of page-wrapper -->
-<?php wp_footer(); ?>
 
+<?php wp_footer(); ?>
+<script type="text/javascript">
+ /*------------------------------------------
+        = GOOGLE MAP
+    -------------------------------------------*/  
+    function map() {
+
+        var myLatLng = new google.maps.LatLng(<?php vipindustrial_display_address(); ?>);
+        var mapProp = {
+            center: myLatLng,
+            zoom: 14,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROAD
+        };
+
+        var map = new google.maps.Map(document.getElementById("map"),mapProp);
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            icon:'<?php echo get_template_directory_uri(); ?>/assets/images/map-marker.png'
+        });
+
+        marker.setMap(map);
+
+        map.set('styles',
+
+            [
+                {
+                    "featureType": "administrative",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#ff8e31"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#f2f2f2"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "saturation": -100
+                        },
+                        {
+                            "lightness": 45
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#ff8e31"
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                }
+            ]
+        );
+    }; 
+
+</script>
 </body>
 </html>
