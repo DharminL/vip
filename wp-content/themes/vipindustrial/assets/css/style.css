@@ -793,9 +793,9 @@ a:focus {
   }
 }
 
-.wpcf7-form input,
-.wpcf7-form textarea,
-.wpcf7-form select {
+.form input,
+.form textarea,
+.form select {
   border-color: #bfbfbf;
   border-radius: 0;
   outline: 0;
@@ -804,9 +804,9 @@ a:focus {
   color: #595959;
 }
 
-.wpcf7-form input:focus,
-.wpcf7-form textarea:focus,
-.wpcf7-form select:focus {
+.form input:focus,
+.form textarea:focus,
+.form select:focus {
   border-color: #ee1c25;
   -webkit-box-shadow: 0 0 5px 0 #ffaa64;
   -moz-box-shadow: 0 0 5px 0 #ffaa64;
@@ -815,31 +815,31 @@ a:focus {
   box-shadow: 0 0 5px 0 #ffaa64;
 }
 
-.wpcf7-form ::-webkit-input-placeholder {
+.form ::-webkit-input-placeholder {
   font-style: 14px;
   font-style: italic;
   color: #595959;
 }
 
-.wpcf7-form :-moz-placeholder {
+.form :-moz-placeholder {
   font-style: 14px;
   font-style: italic;
   color: #595959;
 }
 
-.wpcf7-form ::-moz-placeholder {
+.form ::-moz-placeholder {
   font-style: 14px;
   font-style: italic;
   color: #595959;
 }
 
-.wpcf7-form :-ms-input-placeholder {
+.form :-ms-input-placeholder {
   font-style: 14px;
   font-style: italic;
   color: #595959;
 }
 
-.wpcf7-form select {
+.form select {
   font-style: italic;
   background: url(../images/select-icon.png) no-repeat right center;
   display: inline-block;
@@ -850,7 +850,7 @@ a:focus {
   cursor: pointer;
 }
 
-.wpcf7-form select::-ms-expand {
+.form select::-ms-expand {
   /* for IE 11 */
   display: none;
 }
@@ -2133,6 +2133,8 @@ a:focus {
   display: block;
   color: #404040;
   position: relative;
+  width: 80%;
+  float: left;
 }
 
 .blog-sidebar ul li:first-child a {
@@ -3953,7 +3955,7 @@ a:focus {
   }
 }
 
-.site-footer .widget > h2 {
+.site-footer .widget > h3 {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: normal;
@@ -3962,14 +3964,14 @@ a:focus {
 }
 
 @media (max-width: 1199px) {
-  .site-footer .widget > h2 {
+  .site-footer .widget > h3 {
     font-size: 20px;
     font-size: 1.25rem;
   }
 }
 
 @media (max-width: 767px) {
-  .site-footer .widget > h2 {
+  .site-footer .widget > h3 {
     font-size: 18px;
     font-size: 1.125rem;
   }
@@ -6903,9 +6905,6 @@ a:focus {
 /*--------------------------------------------------------------
 #11.0	careers-section
 --------------------------------------------------------------*/
-.contact-pg .page-title {
-  background: url("../images/pg-title/img-5.jpg") center center/cover no-repeat local;
-}
 
 /*--------------------------------------------------------------
 ##	career page
@@ -8519,7 +8518,7 @@ a:focus {
 }
 #mega-menu-wrap-top #mega-menu-top[data-effect="fade_up"].mega-no-js li.mega-menu-item:hover > ul.mega-sub-menu, #mega-menu-wrap-top #mega-menu-top[data-effect="fade_up"].mega-no-js li.mega-menu-item:focus > ul.mega-sub-menu, #mega-menu-wrap-top #mega-menu-top[data-effect="fade_up"] li.mega-menu-item.mega-toggle-on > ul.mega-sub-menu, #mega-menu-wrap-top #mega-menu-top[data-effect="fade_up"] li.mega-menu-item.mega-menu-megamenu.mega-toggle-on ul.mega-sub-menu {
   opacity: 1;
-  margin-top: -4px;
+  margin-top: 0px;
 }
 #mega-menu-wrap-top #mega-menu-top[data-effect="slide_up"] li.mega-menu-item.mega-menu-megamenu > ul.mega-sub-menu, #mega-menu-wrap-top #mega-menu-top[data-effect="slide_up"] li.mega-menu-item.mega-menu-flyout ul.mega-sub-menu {
   margin-top: 10px;
@@ -8638,7 +8637,7 @@ a:focus {
   border-radius: 0px 0px 0px 0px;
   font-family: inherit;
   font-size: 14px;*/
-  color: #fff; font-weight: 600; padding: 35px 13px;  font-size: 1rem; line-height: 20px; display: block; position: relative; text-transform: uppercase;
+  color: #fff; font-weight: 600; padding: 32px 13px;  font-size: 1rem; line-height: 20px; display: block; position: relative; text-transform: uppercase;
 }
 @media only screen and (max-width: 600px) {
   #mega-menu-wrap-top #mega-menu-top > li.mega-menu-item > a.mega-menu-link {
@@ -9222,3 +9221,4 @@ a:focus {
 .mega-sub-menu .mega-menu-item:last-child{ border-right:none !important; }
 /**  megamenu css over **/
 .how-we-work{ padding-bottom:0 !important; }
+.widget widget_search .widget-title{display:none;}

@@ -317,8 +317,8 @@ function vipindustrial_widgets_init() {
 		'description'   => __( 'Add widgets here to appear in your sidebar on blog posts and archive pages.', 'vipindustrial' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	// First footer widget area, located in the footer. Empty by default.
@@ -687,4 +687,29 @@ function vipindustrial_sanitize_map( $map, $setting ) {
 }
 function vipindustrial_display_address() {
 	echo get_theme_mod( 'vipindustrial_map' );
+}
+//search sidebar
+
+/* ----------- Search Form ---------- */
+add_filter( 'get_search_form', 'my_search_form' );
+function my_search_form( $form ) {
+    $form = '
+	<div class="widget search-widget">
+	<form role="search" method="get" id="searchform" class="searchform form" action="' . home_url( '/' ) . '" >
+        <input type="text" value="' . get_search_query() . '" name="s" id="s" class="s-in form-control" placeholder="Search here.." />
+    </form>
+	</div>
+	';
+
+    return $form;
+}
+/* ----------- End ---------- */
+
+//body class add for blog
+add_filter( 'body_class','my_body_classes' );
+function my_body_classes( $classes ) {
+    if ( is_home() ) {
+        $classes[] = 'blog-with-sidebar-page blog-with-right-sidebar blog-pg';
+    }
+    return $classes;
 }

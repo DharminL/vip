@@ -84,7 +84,6 @@ function dj_product_function( $post ) {
 //hook to save the meta box data
 add_action( 'save_post', 'dj_product_save_meta' );
 function dj_product_save_meta( $post_ID ) {
-    print($post_ID);
 	global $post;
     if( $post->post_type == "products" ) {
         if ( isset( $_POST ) ) {

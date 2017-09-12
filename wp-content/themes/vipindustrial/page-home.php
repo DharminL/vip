@@ -171,27 +171,4 @@ get_header(); ?>
             </div> <!-- end container -->
         </section>
 <!-- end of latest-projects -->
-
-
-<!-- start of contact-section --> 
-        <section class="contact-section">
-            <div class="contact-map" id="map"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col col-md-5 col-md-offset-7 col-sm-6 col-sm-offset-6">
-                        <div class="contact-form">
-                            <h3>Contact Form</h3>
-                            <ul>
-                                <li><i class="fa fa-home"></i><?php echo cfs()->get( 'contact_address' ); ?></li>
-                                <li><i class="fa fa-phone"></i><?php echo cfs()->get( 'contact_number' ); ?></li>
-                            </ul>
-                            <h4>Send Email</h4>
-                            <div class="form contact-validation-active">
-							<?php echo do_shortcode('[contact-form-7 id="155" title="Contact form 1"]'); ?></div>
-                        </div>
-                    </div>
-                </div> <!-- end row -->
-            </div> <!-- end container -->
-        </section>
-<!-- end of contact-section -->
 <?php get_footer();

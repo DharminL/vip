@@ -15,53 +15,73 @@
  * @version 1.0
  */
 
-get_header(); ?>
+get_header(); 
+$img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')),'full'); 
+    $featured_image = $img[0];
+?>
 
-<div class="wrap">
-	<?php if ( is_home() && ! is_front_page() ) : ?>
-		<header class="page-header">
-			<h1 class="page-title"><?php single_post_title(); ?></h1>
-		</header>
-	<?php else : ?>
-	<header class="page-header">
-		<h2 class="page-title"><?php _e( 'Posts', 'vipindustrial' ); ?></h2>
-	</header>
-	<?php endif; ?>
+<!-- start page-title-wrapper -->
+        <div class="page-title" style="background:url(<?php echo $featured_image; ?>) no-repeat local center center / cover;">
+            <div class="container">
+                <h1>Blog</h1>
+            </div>
+        </div>
+        <!-- end page-title-wrapper -->
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
-			<?php
-			if ( have_posts() ) :
+        <!-- start blog-with-sidebar-section -->
+        <section class="blog-with-sidebar-section section-padding">
+            <div class="container">
+                <div class="row blog-with-sidebar">
+                    <div class="blog-content col col-lg-8 col-md-8">
+                        <div class="row blog-s2-grids">
+                            <?php
+								$args = array(
+								'post_type'      => 'post',
+								'orderby'        => 'name',
+								'order'          => 'ASC',
+								'posts_per_page' => 6
+								); 
+								query_posts( $args );
+								// The Loop
+								while ( have_posts() ) : the_post();
+								
+							?>
+                            <div class="col col-sm-6">
+                                <div class="grid">
+                                    <div class="entry-media">
+                                        <?php the_post_thumbnail('full', array('class' => 'img img-responsive')); ?>
+                                    </div>
+                                    <div class="entry-details">
+                                        <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                                        <span class="entry-date"><?php echo get_the_date('d M, Y'); ?></span>
 
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+                                        <div class="entry-footer">
+                                            <a href="<?php the_permalink(); ?>" class="read-more">Read More</a>
+                                            <a href="<?php the_permalink(); ?>" class="comments"><i class="fa fa-comments" aria-hidden="true"></i> <?php wp_count_comments( post_id ); ?> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <?php endwhile; ?>
+                        </div> <!-- end row -->
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/post/content', get_post_format() );
+                        <div class="pagination">
+                            <ul>
+                                <li class="current"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                            </ul>
+                        </div>                
+                    </div> <!-- end blog-content -->
 
-				endwhile;
+                    <div class="blog-sidebar col col-lg-3 col-lg-offset-1 col-md-4 col-sm-5">
+                        <?php get_sidebar('sidebar-1'); ?>
+                    </div>                    
+                </div>
+            </div> <!-- end container -->
+        </section>
+        <!-- end blog-with-sidebar-section -->       
 
-				the_posts_pagination( array(
-					'prev_text' => vipindustrial_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'vipindustrial' ) . '</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'vipindustrial' ) . '</span>' . vipindustrial_get_svg( array( 'icon' => 'arrow-right' ) ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'vipindustrial' ) . ' </span>',
-				) );
-
-			else :
-
-				get_template_part( 'template-parts/post/content', 'none' );
-
-			endif;
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
 
 <?php get_footer();

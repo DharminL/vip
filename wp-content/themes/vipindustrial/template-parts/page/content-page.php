@@ -11,20 +11,36 @@
  */
 
 ?>
+<?php if ( has_post_thumbnail() ) {
+		$image_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
+	} else {
+		$image_url = get_template_directory_uri().'/assets/images/default-bg.jpg';
+	}
+?>
 
+<!-- start page-title-wrapper -->
+<div class="page-title" style="background: url(<?php echo $image_url; ?>) center center/cover no-repeat local;">
+    <div class="container">
+        <?php the_title( '<h1>', '</h1>' ); ?>
+        <?php vipindustrial_edit_link( get_the_ID() ); ?>
+    </div>
+</div>
+<!-- end page-title-wrapper -->
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		<?php vipindustrial_edit_link( get_the_ID() ); ?>
-	</header><!-- .entry-header -->
-	<div class="entry-content">
-		<?php
-			the_content();
+    <section class="service-single-content-wrapper section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col col-lg-10 col-lg-offset-1 content">
+                <?php
+					the_content();
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'vipindustrial' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+					wp_link_pages( array(
+						'before' => '<div class="page-links">' . __( 'Pages:', 'vipindustrial' ),
+						'after'  => '</div>',
+					) );
+				?>
+                </div>
+            </div> <!-- end row -->
+        </div> <!-- end container -->
+    </section>
 </article><!-- #post-## -->
