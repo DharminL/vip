@@ -793,9 +793,9 @@ a:focus {
   }
 }
 
-.form input,
-.form textarea,
-.form select {
+.wpcf7-form input,
+.wpcf7-form textarea,
+.wpcf7-form select {
   border-color: #bfbfbf;
   border-radius: 0;
   outline: 0;
@@ -804,9 +804,9 @@ a:focus {
   color: #595959;
 }
 
-.form input:focus,
-.form textarea:focus,
-.form select:focus {
+.wpcf7-form input:focus,
+.wpcf7-form textarea:focus,
+.wpcf7-form select:focus {
   border-color: #ee1c25;
   -webkit-box-shadow: 0 0 5px 0 #ffaa64;
   -moz-box-shadow: 0 0 5px 0 #ffaa64;
@@ -815,31 +815,31 @@ a:focus {
   box-shadow: 0 0 5px 0 #ffaa64;
 }
 
-.form ::-webkit-input-placeholder {
+.wpcf7-form ::-webkit-input-placeholder {
   font-style: 14px;
   font-style: italic;
   color: #595959;
 }
 
-.form :-moz-placeholder {
+.wpcf7-form :-moz-placeholder {
   font-style: 14px;
   font-style: italic;
   color: #595959;
 }
 
-.form ::-moz-placeholder {
+.wpcf7-form ::-moz-placeholder {
   font-style: 14px;
   font-style: italic;
   color: #595959;
 }
 
-.form :-ms-input-placeholder {
+.wpcf7-form :-ms-input-placeholder {
   font-style: 14px;
   font-style: italic;
   color: #595959;
 }
 
-.form select {
+.wpcf7-form select {
   font-style: italic;
   background: url(../images/select-icon.png) no-repeat right center;
   display: inline-block;
@@ -850,7 +850,7 @@ a:focus {
   cursor: pointer;
 }
 
-.form select::-ms-expand {
+.wpcf7-form select::-ms-expand {
   /* for IE 11 */
   display: none;
 }
@@ -1532,12 +1532,12 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .client-login-area .form input {
+  .client-login-area .wpcf7-form input {
     height: 30px;
   }
 }
 
-.client-login-area .form label {
+.client-login-area .wpcf7-form label {
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: normal;
@@ -1545,21 +1545,21 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .client-login-area .form label {
+  .client-login-area .wpcf7-form label {
     font-size: 13px;
     font-size: 0.8125rem;
   }
 }
 
-.client-login-area .form > div {
+.client-login-area .wpcf7-form > div {
   margin-bottom: 15px;
 }
 
-.client-login-area .form > div:last-child {
+.client-login-area .wpcf7-form > div:last-child {
   margin-bottom: 0;
 }
 
-.client-login-area .form button {
+.client-login-area .wpcf7-form button {
   background-color: #ee1c25;
   width: 100%;
   height: 38px;
@@ -1574,7 +1574,7 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .client-login-area .form button {
+  .client-login-area .wpcf7-form button {
     height: 30px;
     line-height: 27px;
     font-size: 13px;
@@ -3774,52 +3774,52 @@ a:focus {
   padding: 15px;
 }
 
-.hero-slider-s2 .slider-form .form {
+.hero-slider-s2 .slider-form .wpcf7-form {
   background-color: #f2f2ee;
   padding: 24px 25px;
 }
 
-.hero-slider-s2 .slider-form .form ::-webkit-input-placeholder {
+.hero-slider-s2 .slider-form .wpcf7-form ::-webkit-input-placeholder {
   font-style: 16px;
   font-style: normal;
   color: #999;
 }
 
-.hero-slider-s2 .slider-form .form :-moz-placeholder {
+.hero-slider-s2 .slider-form .wpcf7-form :-moz-placeholder {
   font-style: 16px;
   font-style: normal;
   color: #999;
 }
 
-.hero-slider-s2 .slider-form .form ::-moz-placeholder {
+.hero-slider-s2 .slider-form .wpcf7-form ::-moz-placeholder {
   font-style: 16px;
   font-style: normal;
   color: #999;
 }
 
-.hero-slider-s2 .slider-form .form :-ms-input-placeholder {
+.hero-slider-s2 .slider-form .wpcf7-form :-ms-input-placeholder {
   font-style: 16px;
   font-style: normal;
   color: #999;
 }
 
-.hero-slider-s2 .slider-form .form > div {
+.hero-slider-s2 .slider-form .wpcf7-form > div {
   margin-bottom: 15px;
 }
 
-.hero-slider-s2 .slider-form .form > div:last-child {
+.hero-slider-s2 .slider-form .wpcf7-form > div:last-child {
   margin-bottom: 0;
 }
 
-.hero-slider-s2 .slider-form .form input,
-.hero-slider-s2 .slider-form .form textarea {
+.hero-slider-s2 .slider-form .wpcf7-form input,
+.hero-slider-s2 .slider-form .wpcf7-form textarea {
   background-color: #f2f2ee;
   border-color: #c4c4c4;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
-.hero-slider-s2 .slider-form .form select {
+.hero-slider-s2 .slider-form .wpcf7-form select {
   background-color: #f2f2ee;
   background-image: url("../images/slider/select-icon.png");
   background-repeat: no-repeat;
@@ -3828,15 +3828,15 @@ a:focus {
   color: #999;
 }
 
-.hero-slider-s2 .slider-form .form select option {
+.hero-slider-s2 .slider-form .wpcf7-form select option {
   color: #000;
 }
 
-.hero-slider-s2 .slider-form .form textarea {
+.hero-slider-s2 .slider-form .wpcf7-form textarea {
   height: 85px;
 }
 
-.hero-slider-s2 .slider-form .form .submit-btn button {
+.hero-slider-s2 .slider-form .wpcf7-form .submit-btn button {
   background-color: #ee1c25;
   width: 100%;
   height: 35px;
@@ -3852,7 +3852,7 @@ a:focus {
   transition: all 0.3s;
 }
 
-.hero-slider-s2 .slider-form .form .submit-btn button:hover {
+.hero-slider-s2 .slider-form .wpcf7-form .submit-btn button:hover {
   background-color: #ff7808;
 }
 
@@ -3953,7 +3953,7 @@ a:focus {
   }
 }
 
-.site-footer .widget > h3 {
+.site-footer .widget > h2 {
   font-size: 24px;
   font-size: 1.5rem;
   font-weight: normal;
@@ -3962,14 +3962,14 @@ a:focus {
 }
 
 @media (max-width: 1199px) {
-  .site-footer .widget > h3 {
+  .site-footer .widget > h2 {
     font-size: 20px;
     font-size: 1.25rem;
   }
 }
 
 @media (max-width: 767px) {
-  .site-footer .widget > h3 {
+  .site-footer .widget > h2 {
     font-size: 18px;
     font-size: 1.125rem;
   }
@@ -4097,31 +4097,31 @@ a:focus {
   }
 }
 
-.site-footer .newsletter-widget .form ::-webkit-input-placeholder {
+.site-footer .newsletter-widget .wpcf7-form ::-webkit-input-placeholder {
   font-style: 14px;
   font-style: normal;
   color: #646c78;
 }
 
-.site-footer .newsletter-widget .form :-moz-placeholder {
+.site-footer .newsletter-widget .wpcf7-form :-moz-placeholder {
   font-style: 14px;
   font-style: normal;
   color: #646c78;
 }
 
-.site-footer .newsletter-widget .form ::-moz-placeholder {
+.site-footer .newsletter-widget .wpcf7-form ::-moz-placeholder {
   font-style: 14px;
   font-style: normal;
   color: #646c78;
 }
 
-.site-footer .newsletter-widget .form :-ms-input-placeholder {
+.site-footer .newsletter-widget .wpcf7-form :-ms-input-placeholder {
   font-style: 14px;
   font-style: normal;
   color: #646c78;
 }
 
-.site-footer .newsletter-widget .form input {
+.site-footer .newsletter-widget .wpcf7-form input {
   background-color: transparent;
   height: 45px;
   color: #fff;
@@ -4132,16 +4132,16 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .site-footer .newsletter-widget .form input {
+  .site-footer .newsletter-widget .wpcf7-form input {
     height: 40px;
   }
 }
 
-.site-footer .newsletter-widget .form > div {
+.site-footer .newsletter-widget .wpcf7-form > div {
   position: relative;
 }
 
-.site-footer .newsletter-widget .form > div button {
+.site-footer .newsletter-widget .wpcf7-form > div button {
   background-color: #ee1c25;
   width: 60px;
   height: 45px;
@@ -4166,7 +4166,7 @@ a:focus {
 }
 
 @media (max-width: 1199px) {
-  .site-footer .newsletter-widget .form > div button {
+  .site-footer .newsletter-widget .wpcf7-form > div button {
     width: 50px;
     font-size: 18px;
     font-size: 1.125rem;
@@ -4174,7 +4174,7 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .site-footer .newsletter-widget .form > div button {
+  .site-footer .newsletter-widget .wpcf7-form > div button {
     width: 50px;
     height: 40px;
     font-size: 18px;
@@ -4182,7 +4182,7 @@ a:focus {
   }
 }
 
-.site-footer .newsletter-widget .form > div button:hover {
+.site-footer .newsletter-widget .wpcf7-form > div button:hover {
   background-color: #fd7200;
 }
 
@@ -4375,7 +4375,7 @@ a:focus {
 
 .testimonial-section .testimonials-slider .client-quote p:before {
   content: '​‌';
-  background: url("../images/testimonials/quote.png") center center/cover no-repeat local;
+  background: url("../images/quote.png") center center/cover no-repeat local;
   width: 30px;
   height: 26px;
   position: absolute;
@@ -5210,41 +5210,41 @@ a:focus {
   margin: 0 0 1.2em;
 }
 
-.contact-section .form ::-webkit-input-placeholder {
+.contact-section .wpcf7-form ::-webkit-input-placeholder {
   font-style: 18px;
   font-style: normal;
   color: #767676;
 }
 
-.contact-section .form :-moz-placeholder {
+.contact-section .wpcf7-form :-moz-placeholder {
   font-style: 18px;
   font-style: normal;
   color: #767676;
 }
 
-.contact-section .form ::-moz-placeholder {
+.contact-section .wpcf7-form ::-moz-placeholder {
   font-style: 18px;
   font-style: normal;
   color: #767676;
 }
 
-.contact-section .form :-ms-input-placeholder {
+.contact-section .wpcf7-form :-ms-input-placeholder {
   font-style: 18px;
   font-style: normal;
   color: #767676;
 }
 
-.contact-section .form > div {
+.contact-section .wpcf7-form > div {
   margin-bottom: 30px;
 }
 
 @media (max-width: 991px) {
-  .contact-section .form > div {
+  .contact-section .wpcf7-form > div {
     margin-bottom: 20px;
   }
 }
 
-.contact-section .form > div:last-child {
+.contact-section .wpcf7-form > div:last-child {
   margin-bottom: 0;
 }
 
@@ -6923,80 +6923,80 @@ a:focus {
   /*** job list ***/
 }
 
-.careers-section .job-search-form .form {
+.careers-section .job-search-form .wpcf7-form {
   overflow: hidden;
 }
 
-.careers-section .job-search-form .form ::-webkit-input-placeholder {
+.careers-section .job-search-form .wpcf7-form ::-webkit-input-placeholder {
   font-style: 14px;
   font-style: normal;
   color: #8b8b8b;
 }
 
-.careers-section .job-search-form .form :-moz-placeholder {
+.careers-section .job-search-form .wpcf7-form :-moz-placeholder {
   font-style: 14px;
   font-style: normal;
   color: #8b8b8b;
 }
 
-.careers-section .job-search-form .form ::-moz-placeholder {
+.careers-section .job-search-form .wpcf7-form ::-moz-placeholder {
   font-style: 14px;
   font-style: normal;
   color: #8b8b8b;
 }
 
-.careers-section .job-search-form .form :-ms-input-placeholder {
+.careers-section .job-search-form .wpcf7-form :-ms-input-placeholder {
   font-style: 14px;
   font-style: normal;
   color: #8b8b8b;
 }
 
-.careers-section .job-search-form .form > div {
+.careers-section .job-search-form .wpcf7-form > div {
   float: left;
 }
 
 @media (max-width: 767px) {
-  .careers-section .job-search-form .form > div {
+  .careers-section .job-search-form .wpcf7-form > div {
     float: none;
   }
 }
 
-.careers-section .job-search-form .form > div:first-child {
+.careers-section .job-search-form .wpcf7-form > div:first-child {
   width: 40%;
   padding-right: 25px;
 }
 
 @media (max-width: 767px) {
-  .careers-section .job-search-form .form > div:first-child {
+  .careers-section .job-search-form .wpcf7-form > div:first-child {
     width: 100%;
     padding-right: 0;
     margin-bottom: 25px;
   }
 }
 
-.careers-section .job-search-form .form > div:nth-child(2) {
+.careers-section .job-search-form .wpcf7-form > div:nth-child(2) {
   width: 40%;
   padding-right: 25px;
 }
 
 @media (max-width: 767px) {
-  .careers-section .job-search-form .form > div:nth-child(2) {
+  .careers-section .job-search-form .wpcf7-form > div:nth-child(2) {
     width: 100%;
     padding-right: 0;
   }
 }
 
-.careers-section .job-search-form .form > div:nth-child(3) {
+.careers-section .job-search-form .wpcf7-form > div:nth-child(3) {
   width: 20%;
 }
 
 @media (max-width: 767px) {
-  .careers-section .job-search-form .form > div:nth-child(3) {
+  .careers-section .job-search-form .wpcf7-form > div:nth-child(3) {
     width: 100%;
   }
 }
 
-.careers-section .job-search-form .form h5 {
+.careers-section .job-search-form .wpcf7-form h5 {
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.3em;
@@ -7004,13 +7004,13 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .careers-section .job-search-form .form h5 {
+  .careers-section .job-search-form .wpcf7-form h5 {
     font-size: 14px;
     font-size: 0.875rem;
   }
 }
 
-.careers-section .job-search-form .form input {
+.careers-section .job-search-form .wpcf7-form input {
   height: 45px;
   padding: 6px 15px;
   border: 1px solid #d9d9d9;
@@ -7019,16 +7019,16 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .careers-section .job-search-form .form input {
+  .careers-section .job-search-form .wpcf7-form input {
     height: 40px;
   }
 }
 
-.careers-section .job-search-form .form input:focus {
+.careers-section .job-search-form .wpcf7-form input:focus {
   border-color: #ee1c25;
 }
 
-.careers-section .job-search-form .form button {
+.careers-section .job-search-form .wpcf7-form button {
   background-color: #ee1c25;
   width: 100%;
   height: 45px;
@@ -7047,7 +7047,7 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .careers-section .job-search-form .form button {
+  .careers-section .job-search-form .wpcf7-form button {
     height: 40px;
     line-height: 40px;
     font-size: 16px;
@@ -7056,7 +7056,7 @@ a:focus {
   }
 }
 
-.careers-section .job-search-form .form button:hover {
+.careers-section .job-search-form .wpcf7-form button:hover {
   background-color: #fd7200;
 }
 
@@ -7155,7 +7155,7 @@ a:focus {
   float: right;
 }
 
-.careers-section .filter-row .sorting-form .form select {
+.careers-section .filter-row .sorting-form .wpcf7-form select {
   background-image: url(../images/job-search-icon.jpg);
   background-repeat: no-repeat;
   background-position: calc(100% - 20px) center;
@@ -7169,7 +7169,7 @@ a:focus {
 }
 
 @media (max-width: 1199px) {
-  .careers-section .filter-row .sorting-form .form select {
+  .careers-section .filter-row .sorting-form .wpcf7-form select {
     height: 50px;
     font-size: 16px;
     font-size: 1rem;
@@ -7177,7 +7177,7 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .careers-section .filter-row .sorting-form .form select {
+  .careers-section .filter-row .sorting-form .wpcf7-form select {
     height: 45px;
     font-size: 14px;
     font-size: 0.875rem;
@@ -7186,14 +7186,14 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .careers-section .filter-row .sorting-form .form select {
+  .careers-section .filter-row .sorting-form .wpcf7-form select {
     font-size: 13px;
     font-size: 0.8125rem;
     padding: 0 55px 0 15px;
   }
 }
 
-.careers-section .filter-row .sorting-form .form select:focus {
+.careers-section .filter-row .sorting-form .wpcf7-form select:focus {
   border: 0;
   outline: 0;
   -webkit-box-shadow: none;
@@ -8682,7 +8682,7 @@ a:focus {
     padding: 0 10px;
   }
 }
-#mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu > ul.mega-sub-menu, #mega-menu-wrap-top #mega-menu-top > li.mega-menu-flyout > ul.mega-sub-menu {
+#mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu > ul.mega-sub-menu {
   z-index: 999;
   /*-webkit-border-radius: 0px 0px 0px 0px;
   -moz-border-radius: 0px 0px 0px 0px;
@@ -8699,7 +8699,7 @@ a:focus {
   border-bottom: 0px solid #fff;*/
   left: 0;
   background-color: #15191f;
-  border-top: 2px solid #ee1c25;
+    border-top: 2px solid #ee1c25;
 }
 @media only screen and (max-width: 600px) {
   #mega-menu-wrap-top #mega-menu-top > li.mega-menu-megamenu > ul.mega-sub-menu {
@@ -8965,14 +8965,12 @@ a:focus {
   z-index: 999;
   position: absolute;
   width: 150px;
-  /*border-top: 0px solid #fff;
+  border-top: 2px solid #ee1c25;
   border-left: 0px solid #fff;
   border-right: 0px solid #fff;
   border-bottom: 0px solid #fff;
   padding: 0px 0px 0px 0px;
-  background: #f1f1f1;*/
-  background-color: #15191f;
-  border-top: 2px solid #ee1c25;
+  background: #15191f;
 }
 @media only screen and (max-width: 600px) {
   #mega-menu-wrap-top #mega-menu-top > li.mega-menu-flyout ul.mega-sub-menu {
@@ -8988,15 +8986,17 @@ a:focus {
     clear: both;
   }
 }
+#mega-menu-wrap-top #mega-menu-top > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:first-child{ margin-top:9px !important; }
+#mega-menu-wrap-top #mega-menu-top > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item:last-child{ margin-bottom:10px !important; }
 #mega-menu-wrap-top #mega-menu-top > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link {
   display: block;
-  background: #f1f1f1;
-  color: #666;
+  background: none;
+  color: #fff;
   font-family: inherit;
   font-size: 14px;
   font-weight: normal;
   padding: 0px 10px 0px 10px;
-  line-height: 35px;
+  line-height: 1.7;
   text-decoration: none;
   text-transform: none;
   vertical-align: baseline;
@@ -9022,10 +9022,10 @@ a:focus {
   }
 }
 #mega-menu-wrap-top #mega-menu-top > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link:hover, #mega-menu-wrap-top #mega-menu-top > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item a.mega-menu-link:focus {
-  background: #ddd;
+  background: none;
   font-weight: normal;
   text-decoration: none;
-  color: #666;
+  color: #ee1c25;
 }
 #mega-menu-wrap-top #mega-menu-top > li.mega-menu-flyout ul.mega-sub-menu li.mega-menu-item ul.mega-sub-menu {
   position: absolute;
@@ -9221,3 +9221,4 @@ a:focus {
 .mega-sub-menu .mega-menu-item ul li{ border-right:none !important; margin-top:0 !important; }
 .mega-sub-menu .mega-menu-item:last-child{ border-right:none !important; }
 /**  megamenu css over **/
+.how-we-work{ padding-bottom:0 !important; }
