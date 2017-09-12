@@ -16,9 +16,28 @@
  */
 
 get_header(); ?>
-
+<section class="about-us section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-6">
+                        <div class="section-title-s1">
+                            <h2><?php echo cfs()->get( 'about_title' ); ?></h2>
+                        </div>
+                        <div class="about-details">
+                            <?php echo cfs()->get( 'about_content' ); ?>
+                        </div>
+                    </div>
+                    <div class="col col-md-6 about-image-col">
+                        <div class="video-holder">
+                            <img src="<?php echo cfs()->get( 'video_image' ); ?>" alt="" class="img img-responsive">
+                            <a href="<?php echo cfs()->get( 'about_video' ); ?>" class="video-play" data-type="iframe"><i class="fa fa-youtube-play"></i></a>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
 <!-- start of services-serction-s1 --> 
-        <section class="services-serction-s2 section-padding">
+        <section class="services-section section-padding">
             <div class="container">
                 <div class="row section-title-s6">
                     <div class="col col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -172,4 +191,27 @@ get_header(); ?>
             </div> <!-- end container -->
         </section>
 <!-- end of latest-projects -->
-<?php get_footer();
+<!-- start of partners-section --> 
+        <section class="partners-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="partners-slider">
+                        <?php 
+								$fields='';
+								$field='';
+								$fields = CFS()->get( 'logos' );
+								$i=0;
+								foreach ( $fields as $field ) {
+						?>    
+                            <div class="grid">
+                                <img src="<?php echo $field['logo_image']; ?>" alt class="img img-responsive" >
+                            </div>
+                        <?php } ?>    
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+<!-- end of partners-section -->
+<?php get_footer();?>

@@ -905,7 +905,7 @@ a:focus {
 }
 
 .page-title {
-  background: url("../images/pg-title/img-1.jpg") center center/cover no-repeat local;
+  /*background: url("../images/pg-title/img-1.jpg") center center/cover no-repeat local;*/
   height: 365px;
   text-align: center;
   position: relative;
@@ -1394,7 +1394,7 @@ a:focus {
   font-size: 1.125rem;
   font-weight: bold;
   color: #1f252e;
-  padding: 12px 35px;
+  padding: 12px 60px;
   position: relative;
 }
 
@@ -1402,15 +1402,23 @@ a:focus {
   .theme-accordion .panel-heading a, .theme-accordion-s2 .panel-heading a {
     font-size: 16px;
     font-size: 1rem;
+    padding: 10px 45px;
+  }
+}
+
+@media (max-width: 767px) {
+  .theme-accordion .panel-heading a, .theme-accordion-s2 .panel-heading a {
+    font-size: 16px;
+    font-size: 1rem;
     padding: 10px 20px;
   }
 }
 
-.theme-accordion .panel-heading a:after, .theme-accordion-s2 .panel-heading a:after {
+.theme-accordion .panel-heading a:before, .theme-accordion-s2 .panel-heading a:before {
   font-family: "FontAwesome";
-  content: "\f057";
+  content: "\f00d";
   position: absolute;
-  right: 25px;
+  left: 25px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -1420,19 +1428,19 @@ a:focus {
 }
 
 @media (max-width: 991px) {
-  .theme-accordion .panel-heading a:after, .theme-accordion-s2 .panel-heading a:after {
-    right: 20px;
+  .theme-accordion .panel-heading a:before, .theme-accordion-s2 .panel-heading a:before {
+    left: 20px;
   }
 }
 
 @media (max-width: 767px) {
-  .theme-accordion .panel-heading a:after, .theme-accordion-s2 .panel-heading a:after {
+  .theme-accordion .panel-heading a:before, .theme-accordion-s2 .panel-heading a:before {
     display: none;
   }
 }
 
-.theme-accordion .panel-heading .collapsed:after, .theme-accordion-s2 .panel-heading .collapsed:after {
-  content: "\f055";
+.theme-accordion .panel-heading .collapsed:before, .theme-accordion-s2 .panel-heading .collapsed:before {
+  content: "\f067";
 }
 
 @media (max-width: 991px) {
@@ -5361,7 +5369,7 @@ a:focus {
 
 .how-we-work:before {
   content: "";
-  background: url("../images/how-we-work-bg.jpg") center center/cover no-repeat local;
+  /*background: url("../images/how-we-work-bg.jpg") center center/cover no-repeat local;*/
   width: 100%;
   height: 385px;
   position: absolute;
@@ -5726,7 +5734,7 @@ a:focus {
 
 .how-we-work-s2:before {
   content: "";
-  background: url(../images/how-we-work-bg.jpg) center center/cover no-repeat local;
+  /*background: url(../images/how-we-work-bg.jpg) center center/cover no-repeat local;*/
   width: 100%;
   height: 385px;
   position: absolute;
@@ -6226,11 +6234,15 @@ a:focus {
   transform: translate(-50%, -50%);
 }
 
-.overview-section .video-holder {
+.overview-section .video-holder, .about-image-col .video-holder {
   position: relative;
 }
 
-.overview-section .video-holder a {
+.about-image-col .video-holder img {
+  width: 100%;
+}
+
+.overview-section .video-holder a, .about-image-col .video-holder a {
   font-size: 70px;
   font-size: 4.375rem;
   color: #ee1c25;
@@ -6245,14 +6257,14 @@ a:focus {
 }
 
 @media (max-width: 1199px) {
-  .overview-section .video-holder a {
+  .overview-section .video-holder a, .about-image-col .video-holder a {
     font-size: 50px;
     font-size: 50px;
   }
 }
 
 @media (max-width: 767px) {
-  .overview-section .video-holder a {
+  .overview-section .video-holder a, .about-image-col .video-holder a {
     font-size: 35px;
     font-size: 35px;
   }
@@ -6301,7 +6313,7 @@ a:focus {
 #5.0	time-line-section
 --------------------------------------------------------------*/
 .timeline-pg .page-title {
-  background: url("../images/pg-title/img-2.jpg") center center/cover no-repeat local;
+  /*background: url("../images/pg-title/img-2.jpg") center center/cover no-repeat local;*/
 }
 
 .time-line-section {
@@ -6527,7 +6539,7 @@ a:focus {
 #6.0	clients-section
 --------------------------------------------------------------*/
 .clients-pg .page-title {
-  background: url("../images/pg-title/img-3.jpg") center center/cover no-repeat local;
+  /*background: url("../images/pg-title/img-3.jpg") center center/cover no-repeat local;*/
 }
 
 .clients-section .client {
@@ -6642,7 +6654,7 @@ a:focus {
 #7.0	team-section
 --------------------------------------------------------------*/
 .team-pg .page-title {
-  background: url("../images/pg-title/img-4.jpg") center center/cover no-repeat local;
+  /*background: url("../images/pg-title/img-4.jpg") center center/cover no-repeat local;*/
 }
 
 .team-section {
@@ -6883,7 +6895,7 @@ a:focus {
 #8.0	page title
 --------------------------------------------------------------*/
 .testimonials-pg .page-title {
-  background: url("../images/pg-title/img-3.jpg") center center/cover no-repeat local;
+  /*background: url("../images/pg-title/img-3.jpg") center center/cover no-repeat local;*/
 }
 
 /*--------------------------------------------------------------
@@ -6893,7 +6905,7 @@ a:focus {
 #9.0	page title
 --------------------------------------------------------------*/
 .faq-pg .page-title {
-  background: url("../images/pg-title/img-3.jpg") center center/cover no-repeat local;
+  /*background: url("../images/pg-title/img-3.jpg") center center/cover no-repeat local;*/
 }
 
 .faq-pg .testimonials-s2-faq .faq-col {
@@ -6914,7 +6926,7 @@ a:focus {
 #11.0	careers-section
 --------------------------------------------------------------*/
 .careers-pg .page-title {
-  background: url("../images/pg-title/img-6.jpg") center center/cover no-repeat local;
+  /*background: url("../images/pg-title/img-6.jpg") center center/cover no-repeat local;*/
 }
 
 .careers-section {
@@ -7411,7 +7423,7 @@ a:focus {
 #12.0	service-single-content-wrapper
 --------------------------------------------------------------*/
 .services-single-pg .page-title {
-  background: url("../images/pg-title/img-7.jpg") center center/cover no-repeat local;
+  /*background: url("../images/pg-title/img-7.jpg") center center/cover no-repeat local;*/
 }
 
 .services-single-pg .service-single-content {
@@ -9273,4 +9285,79 @@ padding: 6px 12px; color: gray; line-height: 1.42857143; text-align: center; tou
 .faq-accordion .box{ width: 48%; }
 .faq-accordion .box:nth-child(even){ margin-right:0; }
 .faq-accordion .box:nth-child(odd){ margin-right:10px; }
+}
+
+.z-depth-1-half {
+    -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+}
+.shadow-box {
+  padding: 10px;
+}
+.mb-5 {
+    margin-bottom: 15px;
+}
+@media (max-width: 991px) {
+  .mb-5 .col-md-4 {
+    margin-bottom: 10px;
+  }
+}
+
+ul.right-tick li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 4px;
+}
+.about-us .about-details ul.right-tick li:before {
+  content: "\f058";
+}
+ul.right-tick li:before {
+  content: "\f058";
+  font-family: "FontAwesome";
+  color: #ee1c25;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+ul.right-tick li:last-child {
+  margin-bottom: 0;
+}
+
+ul.download-pdf li {
+    margin-bottom: 5px;
+    padding: 0 15px;
+    width: 33.33%;
+    float: left;
+}
+
+ul.download-pdf li a:before {
+  content: "\f1c1";
+  font-family: "FontAwesome";
+  color: #232122;
+  position: absolute;
+  left: 15px;
+  top: 25%;
+}
+
+ul.download-pdf li a {
+  background: #ee1c25;
+  display: block;
+  font-size: 1.125rem;
+  color: #fff;
+  position: relative;
+  padding: 12px 40px;
+}
+
+@media (max-width: 991px) {
+  ul.download-pdf li a {
+    font-size: 0.9375rem;
+    padding: 10px 30px;
+  }
+  ul.download-pdf li {
+      width: 100%;
+  }
+  ul.download-pdf li a:before {
+    left: 7px;
+  }
 }
