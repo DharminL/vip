@@ -308,7 +308,7 @@ a:focus {
 
 /*** back to top button ***/
 .back-to-top {
-  background-color: rgba(255, 142, 49, 0.3);
+  background-color: #ee1c25;
   width: 45px;
   height: 45px;
   line-height: 45px;
@@ -343,7 +343,7 @@ a:focus {
 .back-to-top i {
   font-size: 18px;
   font-size: 1.125rem;
-  color: #ee1c25;
+  color: #fff;
   font-size: 1.125rem;
   position: absolute;
   left: 50%;
@@ -1540,12 +1540,12 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .client-login-area .wpcf7-form input {
+  .client-login-area .form input {
     height: 30px;
   }
 }
 
-.client-login-area .wpcf7-form label {
+.client-login-area .form label {
   font-size: 14px;
   font-size: 0.875rem;
   font-weight: normal;
@@ -1553,21 +1553,21 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .client-login-area .wpcf7-form label {
+  .client-login-area .form label {
     font-size: 13px;
     font-size: 0.8125rem;
   }
 }
 
-.client-login-area .wpcf7-form > div {
+.client-login-area .form > div {
   margin-bottom: 15px;
 }
 
-.client-login-area .wpcf7-form > div:last-child {
+.client-login-area .form > div:last-child {
   margin-bottom: 0;
 }
 
-.client-login-area .wpcf7-form button {
+.client-login-area .form button {
   background-color: #ee1c25;
   width: 100%;
   height: 38px;
@@ -1582,7 +1582,7 @@ a:focus {
 }
 
 @media (max-width: 767px) {
-  .client-login-area .wpcf7-form button {
+  .client-login-area .form button {
     height: 30px;
     line-height: 27px;
     font-size: 13px;
@@ -9262,10 +9262,16 @@ padding: 7px 15px; text-transform: lowercase; }
 .widget_tag_cloud .tagcloud a.tag-cloud-link{ font-size: 0.9375rem !important; font-weight: bold; transition: all 0.3s; display: inline-block;
 padding: 6px 12px; color: gray; line-height: 1.42857143; text-align: center; touch-action: manipulation; cursor: pointer; white-space: nowrap; vertical-align: middle; }
 .widget_tag_cloud .tagcloud a.tag-cloud-link:hover{ color:#ee1c25; }
-.faq-accordion .box{ width:24%; position:relative; float:left; min-height:90px; margin-bottom:15px; overflow:hidden; max-height:90px; border:1px solid #efefef; margin-right:10px; transition: all 0.5s ease-in-out; }
+.faq-accordion .box{ width:24%; position:relative; float:left; /*min-height:90px;*/ margin-bottom:15px; overflow:hidden; /*max-height:90px; */ border:1px solid #efefef; margin-right:10px; transition: all 0.5s ease-in-out; }
 .faq-accordion .box:hover{ background:#f9f9f9; }
 .faq-accordion .box:nth-child(4n){ margin-right:0; }
-.faq-accordion .box img{ position: absolute; left: 50%; top: 50%; -webkit-transform: translateY(-50%) translateX(-50%);  }
+.faq-accordion .box img {
+  /*position: absolute; left: 50%; top: 50%; -webkit-transform: translateY(-50%) translateX(-50%); */
+    max-width: 100%;
+    width: 231px;
+    height: 231px;
+    padding: 15px;
+}
 
 
 /** mediaquery start here **/
@@ -9359,5 +9365,95 @@ ul.download-pdf li a {
   }
   ul.download-pdf li a:before {
     left: 7px;
+  }
+}
+
+/* contact form */
+.contact-page-form textarea {
+  height: 100px;
+}
+
+.contact-page-form .form-group input:not([type="submit"]), 
+.contact-page-form  .form-group textarea, 
+.contact-page-form  .wpcf7 input:not([type="submit"]), 
+.contact-page-form  .wpcf7 textarea {
+  padding: 8px 10px;  
+}
+
+.contact-page-form .submit .wpcf7-submit {
+  background: #ee1c25;
+  padding: 8px 25px;
+  border: none;
+  color: #fff;
+}
+.form-group input:not([type="submit"]),
+.form-group textarea,
+.wpcf7 input:not([type="submit"]),
+.wpcf7 textarea {
+    color: inherit;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    padding: 15px 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.modal-content {
+    background-color: #e5e2e0;
+    border-radius: 0;
+}
+
+.modal-popup-bar-wrp{
+    clear: both;
+}
+.modal-header {
+    border-bottom: 1px solid #3498db;
+}
+.modal-popup-bar{
+    display: block;
+    float: left;
+    height: 11px;
+    width: 25%;
+}
+.modal-red-bar {background-color: #ef3e36;}
+.modal-green-bar {background-color: #abb92e;}
+.modal-orange-bar{background-color: #f57826;}
+.modal-blue-bar{background-color: #17b4e9;}
+
+#rc-imageselect, .g-recaptcha {
+  transform:scale(0.87);
+  -webkit-transform:scale(0.87);
+  transform-origin:0 0;
+  -webkit-transform-origin:0 0;
+}
+
+.fix-dv {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 1000;
+}
+
+.fix-dv a {
+    background: #ee1c25;
+    padding: 7px 10px;
+    color: #fff;
+    font-size: 22px;
+  -ms-transform: rotate(-90deg); /* IE 9 */
+    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    transform: rotate(-90deg);
+    border-radius: 5px 5px 0px 0px;
+    float: left;
+    position: relative;
+    right: -95px;
+    width: 235px;
+    text-align: center;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .fix-dv {
+    display: none;
   }
 }

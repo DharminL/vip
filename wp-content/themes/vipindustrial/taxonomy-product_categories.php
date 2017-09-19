@@ -26,7 +26,7 @@ if(!$categories) {
 	<?php
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
     $args = array(
-	    'posts_per_page' => 8, //remember posts per page should be less or more that what's set in general settings
+	    'posts_per_page' => 12, //remember posts per page should be less or more that what's set in general settings
 	    'paged' => $paged,
 	    'order' => 'desc',
 	    'tax_query' => array(
@@ -40,7 +40,7 @@ if(!$categories) {
 
     $products_query = new WP_Query($args);
     ?>
-    <section class="latest-projects section-padding">
+    <section class="latest-projects section-padding products-listing">
         <div class="container">
         	<div class="portfolio gallery-grid">
                 <div class="row">
@@ -55,12 +55,13 @@ if(!$categories) {
 								<li class="col-md-3 col-sm-6" data-groups='["simpsons"]'>
 						            <figure class="portfolio-item gallery-caption grid">
 						                <div class="inner">
-						                	<a href="<?php the_permalink(); ?>" clss="fancybox">
-								                <img src="<?php if($post_thumbnail_url) { echo $post_thumbnail_url; } else {  echo get_template_directory_uri()."/assets/images/product-image.jpg"; } ?>" alt="<?php the_title(); ?>" />
-								            </a>
+								            <img src="<?php if($post_thumbnail_url) { echo $post_thumbnail_url; } else {  echo get_template_directory_uri()."/assets/images/product-image.jpg"; } ?>" alt="<?php the_title(); ?>" />
 						                </div>
 								        <div class="project-title">
-		                    				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+		                    				<h3><?php the_title(); ?></h3>
+		                    				<hr>
+		                    				<div class="pro-desc"><?php echo substr(strip_tags($post->post_content), 0, 50);?>...</div>
+		                    				<div class="pro-btn"><a href="<?php the_permalink(); ?>">Details</a></div>
 								        </div>
 								    </figure>
 								</li>
@@ -95,7 +96,7 @@ if(!$categories) {
 	    </div>
 	</div>
 	<!-- end page-title-wrapper -->
-	<section class="latest-projects section-padding">
+	<section class="latest-projects section-padding products-listing">
         <div class="container">
         	<div class="portfolio gallery-grid">
                 <div class="row">
@@ -111,12 +112,12 @@ if(!$categories) {
 		<li class="col-md-3 col-sm-6" data-groups='["simpsons"]'>
             <figure class="portfolio-item gallery-caption grid">
                 <div class="inner">
-        			<a href="<?php if($thumb_url){ echo $thumb_url; } else{ echo get_template_directory_uri()."/assets/images/product-image.jpg"; } ?>" class="fancybox">
-            			<img src="<?php if($thumb_url){ echo $thumb_url; } else{ echo get_template_directory_uri()."/assets/images/product-image.jpg"; } ?>" alt="<?php echo $category->name; ?>" />
-        			</a>
+            		<img src="<?php if($thumb_url){ echo $thumb_url; } else{ echo get_template_directory_uri()."/assets/images/product-image.jpg"; } ?>" alt="<?php echo $category->name; ?>" />
         		</div>
         		<div class="project-title">
-                    <h3><a href="<?php echo $product_cat_url ; ?>"><?php echo $category->name; ?></a></h3>
+                    <h3><?php echo $category->name; ?></h3>
+                    <hr/>
+                    <div class="pro-btn"><a href="<?php echo $product_cat_url ; ?>">Products</a></div>
                 </div>
             </figure>
         </li>

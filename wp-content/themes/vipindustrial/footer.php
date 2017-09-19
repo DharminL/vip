@@ -13,6 +13,7 @@
  */
 
 ?>
+
 		<footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -37,14 +38,40 @@
                     </div>
                     <div class="widget social-media-widget">
 						<?php vipindustrial_show_social_icons(); ?>
+                        <br />
+                        <img src="http://192.168.0.100/VIP/wordpress/wp-content/uploads/2017/09/MBAWA.jpg" />
                     </div>
                 </div>
             </div> <!-- end row -->
         </div> <!-- end container -->
     </footer>
+    
 </div><!-- end of page-wrapper -->
 
 <?php wp_footer(); ?>
+<!-- Sticky Form -->
+<div class="fix-dv"> <a href="#" data-toggle="modal" data-target="#quick-contact">Quick Quote</a> </div>
+
+<div class="modal fade" id="quick-contact" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="clearfix modal-popup-bar-wrp">
+                <span class="modal-popup-bar modal-red-bar"></span>
+                <span class="modal-popup-bar modal-green-bar"></span>
+                <span class="modal-popup-bar modal-orange-bar"></span>
+                <span class="modal-popup-bar modal-blue-bar"></span>
+            </div>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><span>Quick Contact</span></h4>
+            </div>
+            <div class="modal-body contact-page-form">
+                <?php echo do_shortcode('[contact-form-7 id="405" title="Quick Contact"]'); ?>
+            </div>
+        </div>
+    </div>
+</div>
 <script type="text/javascript">
  /*------------------------------------------
         = GOOGLE MAP

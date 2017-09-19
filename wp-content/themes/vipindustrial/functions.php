@@ -477,7 +477,7 @@ function vipindustrial_scripts() {
 
 	// All Javascripts
 	wp_enqueue_script( 'vipindustrial-jquery-main', get_theme_file_uri( '/assets/js/jquery.min.js' ), array(), '1.0', true );
-	wp_enqueue_script( 'vipindustrial-bootstrap', get_theme_file_uri( '/assets/js/bootstrap.min.js' ), array(), '1.0', true );
+	wp_enqueue_script( 'vipindustrial-bootstrap-js', get_theme_file_uri( '/assets/js/bootstrap.min.js' ), array(), '1.0', true );
 
 	// Plugins for this template
 	wp_enqueue_script( 'vipindustrial-plugin-collection', get_theme_file_uri( '/assets/js/jquery-plugin-collection.js' ), array(), '1.0', true );

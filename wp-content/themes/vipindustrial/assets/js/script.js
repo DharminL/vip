@@ -516,26 +516,26 @@
     /*------------------------------------------
         = CLIENT LOGIN AREA POPUP
     -------------------------------------------*/  
-    if ($("#client-login-btn").length) {
-        var loginBtn = $("#client-login-btn");
-        var loginArea = $(".client-login-area");
-        var loginForm = $(".client-login-form");
+    // if ($("#client-login-btn").length) {
+    //     var loginBtn = $("#client-login-btn");
+    //     var loginArea = $(".client-login-area");
+    //     var loginForm = $(".client-login-form");
 
-        loginBtn.on("click", function() {
-            loginArea.addClass("client-login-area-fadein");
-            loginForm.addClass("client-login-form-popup");
-            return false;
-        })
+    //     loginBtn.on("click", function() {
+    //         loginArea.addClass("client-login-area-fadein");
+    //         loginForm.addClass("client-login-form-popup");
+    //         return false;
+    //     })
 
-        loginArea.on("click", function() {
-            var $this = $(this);
-            $this.removeClass("client-login-area-fadein");
-            loginForm.removeClass("client-login-form-popup");
-            return false;
-        }).find(".client-login-form").on("click", function(e) {
-            e.stopPropagation();
-        })
-    }
+    //     loginArea.on("click", function() {
+    //         var $this = $(this);
+    //         $this.removeClass("client-login-area-fadein");
+    //         loginForm.removeClass("client-login-form-popup");
+    //         return false;
+    //     }).find(".client-login-form").on("click", function(e) {
+    //         e.stopPropagation();
+    //     })
+    // }
 
 
     /*------------------------------------------

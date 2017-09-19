@@ -66,6 +66,9 @@ get_header(); ?>
                     </div>
                     <?php } ?>
                 </div> <!-- end row -->
+            <div  style="text-align:center" class="all-projects">
+                    <a href="<?php the_permalink(18); ?>" class="theme-btn-s2">Contact Us</a>
+                </div>
             </div> <!-- end container -->
         </section>
 <!-- end of services-serction-s1 -->
@@ -141,6 +144,7 @@ get_header(); ?>
                         </div>
                     </div>
                 </div> <!-- end row -->
+            
             </div> <!-- end container -->
         </section>
 <!-- end of testimonial-section -->
@@ -187,6 +191,9 @@ get_header(); ?>
                             </ul> <!--end portfolio grid -->
                         </div> <!-- gallery-wrapper -->
                     </div> <!--end row -->
+                    <div  style="text-align:center" class="all-projects">
+                    <a href="<?php echo cfs()->get( 'all_product_link' ); ?>" class="theme-btn-s2"><?php echo cfs()->get( 'all_product_text' ); ?></a>
+                </div>
                 </div>
             </div> <!-- end container -->
         </section>
